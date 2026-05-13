@@ -1,0 +1,199 @@
+{
+  "timestamp" : "2026-05-13T19:16:57.803866",
+  "version" : "1.0",
+  "subjects" : [ {
+    "id" : 40,
+    "name" : "Bancos de Dados",
+    "description" : "Tudo relacionado a banco de dados e uso de dados, além de estrutura e infra de dados.",
+    "color" : "#3b82f6",
+    "emoji" : "\uD83D\uDCCA",
+    "createdAt" : "2026-05-13T19:16:52.412151",
+    "updatedAt" : null
+  } ],
+  "topics" : [ {
+    "id" : 73,
+    "subjectId" : 40,
+    "name" : "SGBD ANSI",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.425311",
+    "updatedAt" : null
+  }, {
+    "id" : 74,
+    "subjectId" : 40,
+    "name" : "Relacional",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.426452",
+    "updatedAt" : null
+  }, {
+    "id" : 75,
+    "subjectId" : 40,
+    "name" : "Álgebra Relacional",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.427244",
+    "updatedAt" : null
+  }, {
+    "id" : 76,
+    "subjectId" : 40,
+    "name" : "Formas Normais",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.427852",
+    "updatedAt" : null
+  }, {
+    "id" : 77,
+    "subjectId" : 40,
+    "name" : "Alteryx",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.42844",
+    "updatedAt" : null
+  }, {
+    "id" : 78,
+    "subjectId" : 40,
+    "name" : "Transação",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.429019",
+    "updatedAt" : null
+  }, {
+    "id" : 79,
+    "subjectId" : 40,
+    "name" : "NoSQL",
+    "description" : "",
+    "weekDays" : "",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.429796",
+    "updatedAt" : null
+  }, {
+    "id" : 80,
+    "subjectId" : 40,
+    "name" : "SQL",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.430461",
+    "updatedAt" : null
+  }, {
+    "id" : 81,
+    "subjectId" : 40,
+    "name" : "Postgres",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.431693",
+    "updatedAt" : null
+  }, {
+    "id" : 82,
+    "subjectId" : 40,
+    "name" : "MongoDB",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.432321",
+    "updatedAt" : null
+  }, {
+    "id" : 83,
+    "subjectId" : 40,
+    "name" : "Modelo Multidimensional",
+    "description" : "",
+    "weekDays" : "",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.432861",
+    "updatedAt" : null
+  }, {
+    "id" : 84,
+    "subjectId" : 40,
+    "name" : "Data Lake",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.433467",
+    "updatedAt" : null
+  }, {
+    "id" : 85,
+    "subjectId" : 40,
+    "name" : "Big Data",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.434035",
+    "updatedAt" : null
+  }, {
+    "id" : 86,
+    "subjectId" : 40,
+    "name" : "DB2",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.434625",
+    "updatedAt" : null
+  }, {
+    "id" : 87,
+    "subjectId" : 40,
+    "name" : "SQL Server",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.435355",
+    "updatedAt" : null
+  }, {
+    "id" : 88,
+    "subjectId" : 40,
+    "name" : "Spark e PySpark",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.436168",
+    "updatedAt" : null
+  }, {
+    "id" : 89,
+    "subjectId" : 40,
+    "name" : "Apache Hadoop Ecosystem",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.436767",
+    "updatedAt" : null
+  }, {
+    "id" : 90,
+    "subjectId" : 40,
+    "name" : "DataMesh",
+    "description" : "",
+    "weekDays" : "",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.437278",
+    "updatedAt" : null
+  }, {
+    "id" : 91,
+    "subjectId" : 40,
+    "name" : "Azure Data",
+    "description" : "",
+    "weekDays" : "",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.437884",
+    "updatedAt" : null
+  }, {
+    "id" : 92,
+    "subjectId" : 40,
+    "name" : "AWS Data",
+    "description" : "",
+    "weekDays" : "",
+    "orderIndex" : 0,
+    "createdAt" : "2026-05-13T19:16:52.438425",
+    "updatedAt" : null
+  } ],
+  "topicItems" : [ ],
+  "studySessions" : [ ],
+  "notes" : [ ],
+  "libraryItems" : [ ],
+  "weeklyPlans" : [ ]
+}
