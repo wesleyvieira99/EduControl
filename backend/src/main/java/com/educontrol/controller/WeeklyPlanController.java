@@ -42,20 +42,3 @@ public class WeeklyPlanController {
         return ResponseEntity.noContent().build();
     }
 }
-
-    @PostMapping
-    public ResponseEntity<WeeklyPlan> create(@RequestParam Long topicItemId, @RequestBody WeeklyPlan plan) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(weeklyPlanService.save(topicItemId, plan));
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<WeeklyPlan> update(@PathVariable Long id, @RequestBody WeeklyPlan plan) {
-        return ResponseEntity.ok(weeklyPlanService.update(id, plan));
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
-        weeklyPlanService.delete(id);
-        return ResponseEntity.noContent().build();
-    }
-}
