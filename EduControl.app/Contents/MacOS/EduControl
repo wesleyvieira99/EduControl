@@ -6,6 +6,9 @@ BACKEND="$PROJECT_DIR/backend"
 FRONTEND="$PROJECT_DIR/frontend"
 LOG_DIR="$PROJECT_DIR/logs"
 
+# Garante que os executáveis do Homebrew e sistema estejam disponíveis
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
 mkdir -p "$LOG_DIR"
 
 notify() {
