@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../core/services/api.service';
-import { WeeklyPlan, TopicItem, Subject, Topic } from '../../core/models/models';
+import { WeeklyPlan, Subject, Topic } from '../../core/models/models';
 
 interface DaySlot { label: string; short: string; index: number; plans: WeeklyPlan[]; }
 
@@ -28,7 +28,6 @@ export class PlannerComponent implements OnInit {
 
   subjects: Subject[] = [];
   topics: Topic[] = [];
-  topicItems: TopicItem[] = [];
 
   showModal = false;
   editingPlan: WeeklyPlan | null = null;
@@ -58,7 +57,6 @@ export class PlannerComponent implements OnInit {
     this.modalSubjectId = null;
     this.modalTopicId = null;
     this.topics = [];
-    this.topicItems = [];
     this.showModal = true;
   }
 
@@ -71,26 +69,20 @@ export class PlannerComponent implements OnInit {
 
   onModalSubjectChange() {
     this.modalTopicId = null;
-    this.topicItems = [];
     if (this.modalSubjectId) {
       this.api.getTopics(this.modalSubjectId).subscribe(t => this.topics = t);
-    }
-  }
-
-  onModalTopicChange() {
-    this.topicItems = [];
-    if (this.modalTopicId) {
-      this.api.getTopicItems(this.modalTopicId).subscribe(i => this.topicItems = i);
+    } else {
+      this.topics = [];
     }
   }
 
   savePlan() {
-    if (!this.planForm.topicItemId && !this.editingPlan) return;
+    if (!this.modalTopicId && !this.editingPlan) return;
     const plan: any = { ...this.planForm, dayOfWeek: this.selectedDayIndex };
 
     const obs = this.editingPlan
       ? this.api.updatePlan(this.editingPlan.id!, plan)
-      : this.api.createPlan(plan.topicItemId, plan);
+      : this.api.createPlan(this.modalTopicId!, plan);
 
     obs.subscribe(() => {
       this.api.getPlansByDay(this.selectedDayIndex).subscribe(plans => {

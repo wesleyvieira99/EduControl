@@ -21,14 +21,14 @@ public class WeeklyPlanController {
         return ResponseEntity.ok(weeklyPlanService.findByDay(dayOfWeek));
     }
 
-    @GetMapping("/by-item")
-    public ResponseEntity<List<WeeklyPlanDto>> findByItem(@RequestParam Long topicItemId) {
-        return ResponseEntity.ok(weeklyPlanService.findByTopicItemId(topicItemId));
+    @GetMapping("/by-topic")
+    public ResponseEntity<List<WeeklyPlanDto>> findByTopic(@RequestParam Long topicId) {
+        return ResponseEntity.ok(weeklyPlanService.findByTopicId(topicId));
     }
 
     @PostMapping
-    public ResponseEntity<WeeklyPlan> create(@RequestParam Long topicItemId, @RequestBody WeeklyPlan plan) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(weeklyPlanService.save(topicItemId, plan));
+    public ResponseEntity<WeeklyPlan> create(@RequestParam Long topicId, @RequestBody WeeklyPlan plan) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(weeklyPlanService.save(topicId, plan));
     }
 
     @PutMapping("/{id}")

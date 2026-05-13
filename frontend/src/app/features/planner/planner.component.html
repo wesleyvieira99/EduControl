@@ -28,13 +28,10 @@
         @for (plan of day.plans; track plan.id) {
           <div class="plan-card" [style.border-left-color]="plan.subjectColor || '#6366f1'">
             <div class="plan-info">
-              <div class="plan-name">{{ plan.topicItemName || plan.topicItem?.name || '—' }}</div>
+              <div class="plan-name">{{ plan.topicName || '—' }}</div>
               <div class="plan-subject">
-                {{ plan.subjectEmoji }} {{ plan.subjectName || plan.topicItem?.topic?.subject?.name }}
+                {{ plan.subjectEmoji }} {{ plan.subjectName }}
               </div>
-              @if (plan.topicName) {
-                <div class="plan-topic">{{ plan.topicName }}</div>
-              }
               @if (plan.plannedMinutes) {
                 <div class="plan-time">⏱ {{ plan.plannedMinutes }}min</div>
               }
@@ -72,19 +69,10 @@
           </div>
           <div class="form-group">
             <label>Tema</label>
-            <select [(ngModel)]="modalTopicId" (ngModelChange)="onModalTopicChange()" [disabled]="!modalSubjectId">
+            <select [(ngModel)]="modalTopicId" [disabled]="!modalSubjectId">
               <option [ngValue]="null">Selecione o tema...</option>
               @for (t of topics; track t.id) {
                 <option [ngValue]="t.id">{{ t.name }}</option>
-              }
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Conteúdo</label>
-            <select [(ngModel)]="planForm.topicItemId" [disabled]="!modalTopicId">
-              <option [ngValue]="undefined">Selecione o conteúdo...</option>
-              @for (item of topicItems; track item.id) {
-                <option [ngValue]="item.id">{{ item.name }}</option>
               }
             </select>
           </div>

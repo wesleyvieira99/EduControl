@@ -101,7 +101,7 @@ public class BackupSnapshotDto {
     @Data @Builder @NoArgsConstructor @AllArgsConstructor
     public static class WeeklyPlanEntry {
         private Long id;
-        private Long topicItemId;
+        private Long topicId;
         private Integer dayOfWeek;
         private Integer plannedMinutes;
         private Integer orderIndex;

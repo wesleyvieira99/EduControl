@@ -70,15 +70,12 @@ export interface LibraryItem {
 
 export interface WeeklyPlan {
   id?: number;
-  topicItemId?: number;
-  topicItem?: TopicItem;
+  topicId?: number;
   dayOfWeek: number;
   plannedMinutes: number;
   orderIndex: number;
   createdAt?: string;
   // Contexto flat retornado pelo backend DTO
-  topicItemName?: string;
-  topicId?: number;
   topicName?: string;
   subjectId?: number;
   subjectName?: string;

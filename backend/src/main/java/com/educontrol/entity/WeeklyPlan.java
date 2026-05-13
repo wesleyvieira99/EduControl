@@ -17,10 +17,10 @@ public class WeeklyPlan {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "topic_item_id", nullable = false)
+    @JoinColumn(name = "topic_id", nullable = false)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private TopicItem topicItem;
+    private Topic topic;
 
     // 0=Domingo, 1=Segunda, 2=Terça, 3=Quarta, 4=Quinta, 5=Sexta, 6=Sábado
     @Column(nullable = false)

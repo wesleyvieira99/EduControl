@@ -3,9 +3,8 @@ package com.educontrol.service;
 import com.educontrol.dto.WeeklyPlanDto;
 import com.educontrol.entity.Subject;
 import com.educontrol.entity.Topic;
-import com.educontrol.entity.TopicItem;
 import com.educontrol.entity.WeeklyPlan;
-import com.educontrol.repository.TopicItemRepository;
+import com.educontrol.repository.TopicRepository;
 import com.educontrol.repository.WeeklyPlanRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -19,22 +18,22 @@ import java.util.stream.Collectors;
 public class WeeklyPlanService {
 
     private final WeeklyPlanRepository weeklyPlanRepository;
-    private final TopicItemRepository topicItemRepository;
+    private final TopicRepository topicRepository;
 
     public List<WeeklyPlanDto> findByDay(Integer dayOfWeek) {
         return weeklyPlanRepository.findByDayOfWeekOrderByOrderIndexAsc(dayOfWeek)
                 .stream().map(this::toDto).collect(Collectors.toList());
     }
 
-    public List<WeeklyPlanDto> findByTopicItemId(Long topicItemId) {
-        return weeklyPlanRepository.findByTopicItemId(topicItemId)
+    public List<WeeklyPlanDto> findByTopicId(Long topicId) {
+        return weeklyPlanRepository.findByTopicId(topicId)
                 .stream().map(this::toDto).collect(Collectors.toList());
     }
 
-    public WeeklyPlan save(Long topicItemId, WeeklyPlan plan) {
-        TopicItem item = topicItemRepository.findById(topicItemId)
-                .orElseThrow(() -> new RuntimeException("Item não encontrado: " + topicItemId));
-        plan.setTopicItem(item);
+    public WeeklyPlan save(Long topicId, WeeklyPlan plan) {
+        Topic topic = topicRepository.findById(topicId)
+                .orElseThrow(() -> new RuntimeException("Tema não encontrado: " + topicId));
+        plan.setTopic(topic);
         return weeklyPlanRepository.save(plan);
     }
 
@@ -54,8 +53,7 @@ public class WeeklyPlanService {
     }
 
     private WeeklyPlanDto toDto(WeeklyPlan plan) {
-        TopicItem item = plan.getTopicItem();
-        Topic topic = item != null ? item.getTopic() : null;
+        Topic topic = plan.getTopic();
         Subject subject = topic != null ? topic.getSubject() : null;
         return WeeklyPlanDto.builder()
                 .id(plan.getId())
@@ -63,8 +61,6 @@ public class WeeklyPlanService {
                 .plannedMinutes(plan.getPlannedMinutes())
                 .orderIndex(plan.getOrderIndex())
                 .createdAt(plan.getCreatedAt())
-                .topicItemId(item != null ? item.getId() : null)
-                .topicItemName(item != null ? item.getName() : null)
                 .topicId(topic != null ? topic.getId() : null)
                 .topicName(topic != null ? topic.getName() : null)
                 .subjectId(subject != null ? subject.getId() : null)

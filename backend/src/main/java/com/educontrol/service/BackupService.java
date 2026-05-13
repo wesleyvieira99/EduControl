@@ -98,7 +98,7 @@ public class BackupService {
 
         List<BackupSnapshotDto.WeeklyPlanEntry> weeklyPlans = weeklyPlanRepository.findAll().stream()
                 .map(wp -> BackupSnapshotDto.WeeklyPlanEntry.builder()
-                        .id(wp.getId()).topicItemId(wp.getTopicItem().getId())
+                        .id(wp.getId()).topicId(wp.getTopic().getId())
                         .dayOfWeek(wp.getDayOfWeek()).plannedMinutes(wp.getPlannedMinutes())
                         .orderIndex(wp.getOrderIndex()).createdAt(wp.getCreatedAt())
                         .build())
@@ -257,12 +257,12 @@ public class BackupService {
 
         // Weekly Plans
         for (BackupSnapshotDto.WeeklyPlanEntry e : snapshot.getWeeklyPlans()) {
-            Long newItemId = topicItemIdMap.get(e.getTopicItemId());
-            if (newItemId == null) continue;
-            TopicItem item = topicItemRepository.findById(newItemId).orElse(null);
-            if (item == null) continue;
+            Long newTopicId = topicIdMap.get(e.getTopicId());
+            if (newTopicId == null) continue;
+            Topic topic = topicRepository.findById(newTopicId).orElse(null);
+            if (topic == null) continue;
             WeeklyPlan wp = WeeklyPlan.builder()
-                    .topicItem(item).dayOfWeek(e.getDayOfWeek())
+                    .topic(topic).dayOfWeek(e.getDayOfWeek())
                     .plannedMinutes(e.getPlannedMinutes() != null ? e.getPlannedMinutes() : 30)
                     .orderIndex(e.getOrderIndex() != null ? e.getOrderIndex() : 0)
                     .build();

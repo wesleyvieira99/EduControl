@@ -129,10 +129,10 @@ export class ApiService {
     return this.http.get<WeeklyPlan[]>(`${API}/weekly-plans`, { params: new HttpParams().set('dayOfWeek', dayOfWeek) });
   }
   getPlansByDay(dayOfWeek: number): Observable<WeeklyPlan[]> { return this.getWeeklyPlansByDay(dayOfWeek); }
-  createWeeklyPlan(topicItemId: number, data: WeeklyPlan): Observable<WeeklyPlan> {
-    return this.http.post<WeeklyPlan>(`${API}/weekly-plans`, data, { params: new HttpParams().set('topicItemId', topicItemId) });
+  createWeeklyPlan(topicId: number, data: WeeklyPlan): Observable<WeeklyPlan> {
+    return this.http.post<WeeklyPlan>(`${API}/weekly-plans`, data, { params: new HttpParams().set('topicId', topicId) });
   }
-  createPlan(topicItemId: number, data: any): Observable<WeeklyPlan> { return this.createWeeklyPlan(topicItemId, data); }
+  createPlan(topicId: number, data: any): Observable<WeeklyPlan> { return this.createWeeklyPlan(topicId, data); }
   updateWeeklyPlan(id: number, data: WeeklyPlan): Observable<WeeklyPlan> {
     return this.http.put<WeeklyPlan>(`${API}/weekly-plans/${id}`, data);
   }
