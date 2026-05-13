@@ -1,3 +1,45 @@
+<!-- Splash screen de inicialização -->
+@if (initializing) {
+  <div class="splash" [class.splash-fade-out]="splashFading">
+    <div class="splash-orb splash-orb-1"></div>
+    <div class="splash-orb splash-orb-2"></div>
+    <div class="splash-content">
+      <div class="splash-icon">📚</div>
+      <h1 class="splash-title">EduControl</h1>
+      <p class="splash-subtitle">Gestão de Estudos</p>
+
+      <div class="splash-steps">
+        <div class="splash-step"
+             [class.step-active]="initStep === 'connecting'"
+             [class.step-done]="initStep === 'importing' || initStep === 'done'">
+          <span class="step-dot"></span>
+          <span>Conectando ao servidor</span>
+        </div>
+        <div class="splash-step"
+             [class.step-active]="initStep === 'importing'"
+             [class.step-done]="initStep === 'done'">
+          <span class="step-dot"></span>
+          <span>Restaurando dados</span>
+        </div>
+        <div class="splash-step"
+             [class.step-active]="initStep === 'done'"
+             [class.step-done]="initStep === 'done'">
+          <span class="step-dot"></span>
+          <span>Pronto!</span>
+        </div>
+      </div>
+
+      <div class="splash-bar">
+        <div class="splash-bar-fill"
+             [class.bar-connecting]="initStep === 'connecting'"
+             [class.bar-importing]="initStep === 'importing'"
+             [class.bar-done]="initStep === 'done'">
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
 <!-- Ambient background orbs (Apple TV style) -->
 <div class="bg-ambient" aria-hidden="true">
   <div class="bg-orb bg-orb-1"></div>

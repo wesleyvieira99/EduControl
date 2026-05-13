@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ApiService } from './core/services/api.service';
 
 interface NavItem { path: string; icon: SafeHtml; label: string; }
 
@@ -21,16 +23,20 @@ const ICONS: Record<string, string> = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App implements OnInit {
   title = 'EduControl';
   sidebarOpen = false;
   navItems: NavItem[];
 
-  constructor(private sanitizer: DomSanitizer) {
+  initializing = true;
+  splashFading = false;
+  initStep: 'connecting' | 'importing' | 'done' = 'connecting';
+
+  constructor(private sanitizer: DomSanitizer, private api: ApiService) {
     const safe = (k: string) => sanitizer.bypassSecurityTrustHtml(ICONS[k]);
     this.navItems = [
       { path: '/dashboard', icon: safe('dashboard'), label: 'Dashboard'  },
@@ -42,6 +48,24 @@ export class App {
       { path: '/analytics', icon: safe('analytics'), label: 'Análises'   },
       { path: '/ai',        icon: safe('ai'),        label: 'IA'         },
     ];
+  }
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.initStep = 'importing';
+      this.api.importBackup().subscribe({
+        next: () => this.finishSplash(),
+        error: () => this.finishSplash()
+      });
+    }, 1200);
+  }
+
+  private finishSplash() {
+    this.initStep = 'done';
+    setTimeout(() => {
+      this.splashFading = true;
+      setTimeout(() => { this.initializing = false; }, 600);
+    }, 700);
   }
 
   toggleSidebar() { this.sidebarOpen = !this.sidebarOpen; }

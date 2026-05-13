@@ -1,39 +1,57 @@
 #!/usr/bin/env bash
-# Resolve o diretório raiz do projeto a partir de dentro do .app
+# EduControl — Lançador silencioso (sem terminal)
 APP_BUNDLE="$(cd "$(dirname "$0")/../.." && pwd)"
 PROJECT_DIR="$(dirname "$APP_BUNDLE")"
 BACKEND="$PROJECT_DIR/backend"
 FRONTEND="$PROJECT_DIR/frontend"
+LOG_DIR="$PROJECT_DIR/logs"
 
-# Se já estiver rodando, só abre o navegador
+mkdir -p "$LOG_DIR"
+
+notify() {
+  osascript -e "display notification \"$1\" with title \"EduControl 📚\"" 2>/dev/null || true
+}
+
+# Se frontend já estiver rodando, só abre o navegador
 if lsof -i :4200 -t &>/dev/null 2>&1; then
   open "http://localhost:4200"
   exit 0
 fi
 
-# Notificação de início
-osascript -e 'display notification "Iniciando servidores…" with title "EduControl 📚" subtitle "Aguarde alguns instantes"' 2>/dev/null || true
+notify "Iniciando EduControl…"
 
-# Abre dois terminais: backend e frontend
-osascript - "$BACKEND" "$FRONTEND" << 'EOF'
-on run argv
-  set backendDir  to item 1 of argv
-  set frontendDir to item 2 of argv
+# Encerra processos antigos nas portas usadas
+OLD_BACK=$(lsof -ti :8080 2>/dev/null); [ -n "$OLD_BACK"  ] && kill -9 $OLD_BACK  2>/dev/null && sleep 1
+OLD_FRONT=$(lsof -ti :4200 2>/dev/null); [ -n "$OLD_FRONT" ] && kill -9 $OLD_FRONT 2>/dev/null && sleep 1
 
-  tell application "Terminal"
-    activate
+# ── Backend ───────────────────────────────────────────────────────────────
+cd "$BACKEND"
+nohup mvn spring-boot:run >> "$LOG_DIR/backend.log" 2>&1 &
+BACK_PID=$!
+disown $BACK_PID
 
-    -- Janela 1: Backend
-    set w1 to do script "clear; printf '\\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n  📚  EduControl — Backend  (porta 8080)\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\033[0m'; cd " & quoted form of backendDir & "; mvn spring-boot:run"
+# Aguarda backend responder (máx 90s)
+notify "Aguardando backend…"
+for i in $(seq 1 90); do
+  curl -sf http://localhost:8080/api/subjects -o /dev/null 2>&1 && break
+  sleep 1
+done
 
-    -- Janela 2: Frontend (aguarda 20s para o backend subir)
-    set w2 to do script "clear; printf '\\033[1;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n  🎨  EduControl — Frontend  (porta 4200)\\n  Aguardando backend iniciar…\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\033[0m'; cd " & quoted form of frontendDir & "; sleep 20 && ng serve --host 0.0.0.0 --open"
+# ── Frontend ──────────────────────────────────────────────────────────────
+cd "$FRONTEND"
+nohup ng serve --host 0.0.0.0 >> "$LOG_DIR/frontend.log" 2>&1 &
+FRONT_PID=$!
+disown $FRONT_PID
 
-    -- Posiciona as janelas lado a lado
-    try
-      set bounds of w1 to {0, 23, 950, 500}
-      set bounds of w2 to {960, 23, 1910, 500}
-    end try
-  end tell
-end run
-EOF
+# Aguarda frontend compilar (máx 90s)
+notify "Compilando frontend…"
+for i in $(seq 1 90); do
+  curl -sf http://localhost:4200 -o /dev/null 2>&1 && break
+  sleep 1
+done
+
+# Salva PIDs para parar depois
+echo "$BACK_PID $FRONT_PID" > "$PROJECT_DIR/.educontrol.pids"
+
+notify "EduControl pronto! 🚀"
+open "http://localhost:4200"
