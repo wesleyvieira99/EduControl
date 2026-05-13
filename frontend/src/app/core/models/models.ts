@@ -137,3 +137,9 @@ export interface AIResponse {
   success: boolean;
   error?: string;
 }
+
+export interface BackupResult {
+  filename: string;
+  message: string;
+  error?: string;
+}

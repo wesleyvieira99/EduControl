@@ -3,8 +3,26 @@
     <h1 class="page-title">Dashboard ⚡</h1>
     <p class="page-subtitle">{{ today | date:'EEEE, d \'de\' MMMM':'':'pt-BR' }}</p>
   </div>
-  <button class="btn btn-glass btn-sm" (click)="load()">↻ Atualizar</button>
+  <div class="header-actions">
+    <button class="btn btn-glass btn-sm" (click)="load()">↻ Atualizar</button>
+    <button class="btn btn-glass btn-sm backup-btn"
+            (click)="exportBackup()"
+            [disabled]="backupLoading"
+            title="Exportar snapshot e commitar no GitHub">
+      {{ backupLoading ? '⏳' : '📤' }} Exportar
+    </button>
+    <button class="btn btn-glass btn-sm backup-btn"
+            (click)="importBackup()"
+            [disabled]="backupLoading"
+            title="Restaurar snapshot mais recente">
+      {{ backupLoading ? '⏳' : '📥' }} Importar
+    </button>
+  </div>
 </div>
+
+@if (backupMessage) {
+  <div class="backup-toast" [class.error]="backupError">{{ backupMessage }}</div>
+}
 
 @if (loading) {
   <div class="loading-overlay">

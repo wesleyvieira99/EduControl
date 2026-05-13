@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import {
   Subject, Topic, TopicItem, StudySession,
   Note, LibraryItem, WeeklyPlan, DashboardData,
-  CalendarEvent, AIRequest, AIResponse
+  CalendarEvent, AIRequest, AIResponse, BackupResult
 } from '../models/models';
 
 const API = 'http://localhost:8080/api';
@@ -157,5 +157,14 @@ export class ApiService {
   // ── AI ────────────────────────────────────────────────────────────────────
   generateAI(request: AIRequest): Observable<AIResponse> {
     return this.http.post<AIResponse>(`${API}/ai/generate`, request);
+  }
+
+  // ── Backup ────────────────────────────────────────────────────────────────
+  exportBackup(): Observable<BackupResult> {
+    return this.http.post<BackupResult>(`${API}/backup/export`, {});
+  }
+
+  importBackup(): Observable<BackupResult> {
+    return this.http.post<BackupResult>(`${API}/backup/import`, {});
   }
 }
