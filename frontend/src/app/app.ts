@@ -78,23 +78,15 @@ export class App implements OnInit {
     this.restarting = true;
     this.restartMessage = 'Salvando dados...';
     this.api.restartApp().subscribe({
-      next: () => this.waitForBackend(),
-      error: () => this.waitForBackend()
+      next: () => {
+        this.restartMessage = 'Recarregando...';
+        setTimeout(() => window.location.reload(), 1000);
+      },
+      error: () => {
+        this.restartMessage = 'Recarregando...';
+        setTimeout(() => window.location.reload(), 1000);
+      }
     });
-  }
-
-  private waitForBackend() {
-    this.restartMessage = 'Aguardando servidor...';
-    const check = () => {
-      this.api.healthCheck().subscribe({
-        next: () => {
-          this.restartMessage = 'Pronto! Recarregando...';
-          setTimeout(() => window.location.reload(), 800);
-        },
-        error: () => setTimeout(check, 2500)
-      });
-    };
-    setTimeout(check, 4000);
   }
 }
 
