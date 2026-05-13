@@ -26,10 +26,15 @@
 
       <div class="plan-list">
         @for (plan of day.plans; track plan.id) {
-          <div class="plan-card" [style.border-left-color]="plan.topicItem?.topic?.subject?.color || '#6366f1'">
+          <div class="plan-card" [style.border-left-color]="plan.subjectColor || '#6366f1'">
             <div class="plan-info">
-              <div class="plan-name">{{ plan.topicItem?.name || '—' }}</div>
-              <div class="plan-subject">{{ plan.topicItem?.topic?.subject?.name }}</div>
+              <div class="plan-name">{{ plan.topicItemName || plan.topicItem?.name || '—' }}</div>
+              <div class="plan-subject">
+                {{ plan.subjectEmoji }} {{ plan.subjectName || plan.topicItem?.topic?.subject?.name }}
+              </div>
+              @if (plan.topicName) {
+                <div class="plan-topic">{{ plan.topicName }}</div>
+              }
               @if (plan.plannedMinutes) {
                 <div class="plan-time">⏱ {{ plan.plannedMinutes }}min</div>
               }

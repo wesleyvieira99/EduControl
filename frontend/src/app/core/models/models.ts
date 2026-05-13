@@ -76,6 +76,14 @@ export interface WeeklyPlan {
   plannedMinutes: number;
   orderIndex: number;
   createdAt?: string;
+  // Contexto flat retornado pelo backend DTO
+  topicItemName?: string;
+  topicId?: number;
+  topicName?: string;
+  subjectId?: number;
+  subjectName?: string;
+  subjectColor?: string;
+  subjectEmoji?: string;
 }
 
 export interface DashboardData {

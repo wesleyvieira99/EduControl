@@ -129,7 +129,8 @@ public class BackupService {
         try {
             runGit(new String[]{"git", "add", "history/"}, projectRoot);
             runGit(new String[]{"git", "commit", "-m", "backup: snapshot " + timestamp}, projectRoot);
-            log.info("Git commit done for snapshot: {}", filename);
+            runGit(new String[]{"git", "push"}, projectRoot);
+            log.info("Git commit+push done for snapshot: {}", filename);
         } catch (Exception e) {
             log.warn("Git commit skipped: {}", e.getMessage());
         }
