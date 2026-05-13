@@ -36,6 +36,9 @@ export class App implements OnInit {
   splashFading = false;
   initStep: 'connecting' | 'importing' | 'done' = 'connecting';
 
+  restarting = false;
+  restartMessage = 'Reiniciando...';
+
   constructor(private sanitizer: DomSanitizer, private api: ApiService) {
     const safe = (k: string) => sanitizer.bypassSecurityTrustHtml(ICONS[k]);
     this.navItems = [
@@ -69,5 +72,29 @@ export class App implements OnInit {
   }
 
   toggleSidebar() { this.sidebarOpen = !this.sidebarOpen; }
+
+  restart() {
+    if (!confirm('Reiniciar o EduControl?\nOs dados serão salvos automaticamente.')) return;
+    this.restarting = true;
+    this.restartMessage = 'Salvando dados...';
+    this.api.restartApp().subscribe({
+      next: () => this.waitForBackend(),
+      error: () => this.waitForBackend()
+    });
+  }
+
+  private waitForBackend() {
+    this.restartMessage = 'Aguardando servidor...';
+    const check = () => {
+      this.api.healthCheck().subscribe({
+        next: () => {
+          this.restartMessage = 'Pronto! Recarregando...';
+          setTimeout(() => window.location.reload(), 800);
+        },
+        error: () => setTimeout(check, 2500)
+      });
+    };
+    setTimeout(check, 4000);
+  }
 }
 

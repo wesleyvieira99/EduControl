@@ -167,4 +167,13 @@ export class ApiService {
   importBackup(): Observable<BackupResult> {
     return this.http.post<BackupResult>(`${API}/backup/import`, {});
   }
+
+  // ── System ───────────────────────────────────────────────────────────────
+  healthCheck(): Observable<{status: string}> {
+    return this.http.get<{status: string}>(`${API}/system/health`);
+  }
+
+  restartApp(): Observable<{message: string}> {
+    return this.http.post<{message: string}>(`${API}/system/restart`, {});
+  }
 }

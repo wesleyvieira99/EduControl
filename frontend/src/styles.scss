@@ -641,6 +641,79 @@ select option { background: #1c1c1e; color: var(--text-primary); }
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
+   Botão Reiniciar (sidebar)
+   ═══════════════════════════════════════════════════════════════════════ */
+.restart-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  padding: 4px 9px;
+  cursor: pointer;
+  transition: color 0.18s, background 0.18s, border-color 0.18s;
+  svg { opacity: 0.7; }
+  &:hover {
+    color: var(--accent);
+    background: rgba(94, 92, 230, 0.1);
+    border-color: rgba(94, 92, 230, 0.25);
+    svg { opacity: 1; }
+  }
+  &:active { transform: scale(0.95); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Overlay de Reinicialização
+   ═══════════════════════════════════════════════════════════════════════ */
+.restart-overlay {
+  position: fixed; inset: 0; z-index: 9998;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(20px) saturate(1.6);
+  display: flex; align-items: center; justify-content: center;
+  animation: restart-enter 0.3s ease both;
+}
+@keyframes restart-enter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.restart-content {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  text-align: center;
+}
+.restart-spinner {
+  width: 48px; height: 48px;
+  border: 3px solid rgba(255,255,255,0.1);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.restart-icon {
+  font-size: 48px;
+  position: absolute;
+  animation: restart-icon-pulse 2s ease-in-out infinite;
+}
+@keyframes restart-icon-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50%       { transform: scale(1.08); opacity: 1; }
+}
+.restart-title {
+  font-size: 22px; font-weight: 700;
+  background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin: 0;
+}
+.restart-message {
+  font-size: 14px; color: var(--text-muted); margin: 0;
+  animation: msg-fade 0.4s ease;
+}
+@keyframes msg-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
    Splash Screen de Inicialização
    ═══════════════════════════════════════════════════════════════════════ */
 .splash {
