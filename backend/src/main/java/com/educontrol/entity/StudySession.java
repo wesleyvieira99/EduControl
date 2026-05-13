@@ -1,5 +1,6 @@
 package com.educontrol.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
@@ -19,6 +20,7 @@ public class StudySession {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "topic_item_id", nullable = false)
+    @JsonBackReference("topicitem-sessions")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private TopicItem topicItem;

@@ -1,5 +1,7 @@
 package com.educontrol.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
@@ -28,6 +30,7 @@ public class Topic {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "subject_id", nullable = false)
+    @JsonBackReference("subject-topics")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Subject subject;
@@ -49,6 +52,7 @@ public class Topic {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference("topic-items")
     @Builder.Default
     private List<TopicItem> items = new ArrayList<>();
 
