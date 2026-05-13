@@ -142,7 +142,11 @@ body {
 }
 
 /* ─── App Shell ──────────────────────────────────────────────────────────── */
-.app-shell { display: flex; min-height: 100vh; position: relative; z-index: 1; }
+.app-shell { display: flex; min-height: 100vh; position: relative; z-index: 1; animation: shell-enter 0.45s ease both; }
+@keyframes shell-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* ─── Sidebar ────────────────────────────────────────────────────────────── */
 .glass-sidebar {

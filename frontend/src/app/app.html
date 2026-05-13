@@ -59,6 +59,7 @@
   <div class="bg-orb bg-orb-3"></div>
 </div>
 
+@if (!initializing) {
 <div class="app-shell" [class.sidebar-open]="sidebarOpen">
   <!-- Mobile backdrop -->
   @if (sidebarOpen) {
@@ -123,3 +124,4 @@
     </div>
   </main>
 </div>
+} <!-- /!initializing -->
