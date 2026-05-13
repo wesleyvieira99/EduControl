@@ -1,0 +1,89 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">📝 Anotações</h1>
+    <p class="page-subtitle">Suas anotações por matéria, tema e conteúdo</p>
+  </div>
+  <button class="btn btn-primary" (click)="openCreate()">+ Nova Anotação</button>
+</div>
+
+<!-- Filters -->
+<div class="filters glass-card">
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" [(ngModel)]="search" (ngModelChange)="loadNotes()" placeholder="Buscar anotações..." />
+    @if (search) {
+      <button class="btn-icon" (click)="search = ''; loadNotes()">✕</button>
+    }
+  </div>
+  <select [(ngModel)]="filterSubjectId" (ngModelChange)="loadNotes()">
+    <option [ngValue]="null">Todas as matérias</option>
+    @for (s of subjects; track s.id) {
+      <option [ngValue]="s.id">{{ s.emoji }} {{ s.name }}</option>
+    }
+  </select>
+</div>
+
+<!-- Notes Grid -->
+@if (loading) {
+  <div class="loading-overlay" style="height:200px"><div class="loading-spinner"></div></div>
+}
+
+@if (!loading && notes.length === 0) {
+  <div class="empty-state" style="padding: 80px 0">
+    <div class="empty-icon">📭</div>
+    <div class="empty-text">Nenhuma anotação encontrada</div>
+  </div>
+}
+
+<div class="notes-grid">
+  @for (n of notes; track n.id) {
+    <div class="note-card glass-card" (click)="openEdit(n)">
+      <div class="note-header">
+        <div class="note-title">{{ n.title }}</div>
+        <button class="btn-icon" (click)="$event.stopPropagation(); delete(n)">🗑️</button>
+      </div>
+      @if (n.subjectId) {
+        <div class="note-subject chip">{{ getSubjectName(n.subjectId) }}</div>
+      }
+      <div class="note-content">{{ n.content }}</div>
+      <div class="note-date">{{ formatDate(n.createdAt || '') }}</div>
+    </div>
+  }
+</div>
+
+<!-- Note Modal -->
+@if (showModal) {
+  <div class="modal-overlay" (click)="showModal = false">
+    <div class="modal-content modal-large" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ editingNote ? 'Editar Anotação' : 'Nova Anotação' }}</h2>
+        <button class="btn-icon" (click)="showModal = false">✕</button>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <div class="form-group">
+          <label>Título *</label>
+          <input [(ngModel)]="noteForm.title" placeholder="Título da anotação" />
+        </div>
+        <div class="form-group">
+          <label>Matéria</label>
+          <select [(ngModel)]="noteForm.subjectId">
+            <option [ngValue]="undefined">Nenhuma</option>
+            @for (s of subjects; track s.id) {
+              <option [ngValue]="s.id">{{ s.emoji }} {{ s.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Conteúdo</label>
+          <textarea [(ngModel)]="noteForm.content" placeholder="Digite sua anotação..." rows="12" style="font-family: monospace; font-size: 14px; line-height: 1.7;"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-glass" (click)="showModal = false">Cancelar</button>
+        <button class="btn btn-primary" (click)="save()">{{ editingNote ? 'Salvar' : 'Criar' }}</button>
+      </div>
+    </div>
+  </div>
+}

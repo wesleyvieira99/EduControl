@@ -1,0 +1,158 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">⏱️ Timer de Estudos</h1>
+    <p class="page-subtitle">Controle seu tempo de estudo por item</p>
+  </div>
+</div>
+
+<div class="timer-layout">
+  <!-- Timer Panel -->
+  <div class="timer-panel glass-card">
+
+    <!-- Selection -->
+    <div class="selection-area">
+      <div class="form-group">
+        <label>Matéria</label>
+        <select [(ngModel)]="selectedSubjectId" (ngModelChange)="onSubjectChange()">
+          <option [ngValue]="null">Selecione a matéria...</option>
+          @for (s of subjects; track s.id) {
+            <option [ngValue]="s.id">{{ s.emoji }} {{ s.name }}</option>
+          }
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tema</label>
+        <select [(ngModel)]="selectedTopicId" (ngModelChange)="onTopicChange()" [disabled]="!selectedSubjectId">
+          <option [ngValue]="null">Selecione o tema...</option>
+          @for (t of topics; track t.id) {
+            <option [ngValue]="t.id">{{ t.name }}</option>
+          }
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Conteúdo</label>
+        <select [(ngModel)]="selectedItemId" (ngModelChange)="onItemChange()" [disabled]="!selectedTopicId">
+          <option [ngValue]="null">Selecione o conteúdo...</option>
+          @for (item of topicItems; track item.id) {
+            <option [ngValue]="item.id">{{ item.name }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <!-- Clock Display -->
+    <div class="clock-area" [class.running]="isRunning">
+      <svg class="clock-ring" viewBox="0 0 240 240">
+        <!-- Background circle -->
+        <circle cx="120" cy="120" r="110" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>
+        <!-- Progress circle -->
+        <circle
+          cx="120" cy="120" r="110"
+          fill="none"
+          stroke="url(#timerGrad)"
+          stroke-width="8"
+          stroke-linecap="round"
+          [attr.stroke-dasharray]="circumference"
+          [attr.stroke-dashoffset]="dashOffset"
+          transform="rotate(-90 120 120)"
+          style="transition: stroke-dashoffset 1s linear"
+        />
+        <defs>
+          <linearGradient id="timerGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7c6aee"/>
+            <stop offset="100%" stop-color="#c084fc"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="clock-center">
+        <div class="clock-time" [class.pulse]="isRunning">{{ displayTime }}</div>
+        <div class="clock-label">{{ isRunning ? 'estudando...' : (elapsed > 0 ? 'pausado' : 'pronto') }}</div>
+        @if (selectedItem) {
+          <div class="clock-item">{{ selectedItem.name }}</div>
+        }
+      </div>
+    </div>
+
+    <!-- Notes -->
+    @if (isRunning || elapsed > 0) {
+      <div class="form-group notes-field">
+        <label>Anotação da Sessão</label>
+        <textarea [(ngModel)]="sessionNotes" placeholder="O que você estudou? Dúvidas, insights..." rows="2"></textarea>
+      </div>
+    }
+
+    <!-- Controls -->
+    <div class="timer-controls">
+      @if (!isRunning && elapsed === 0) {
+        <button class="btn btn-primary start-btn" (click)="start()" [disabled]="!selectedItemId">
+          ▶ Iniciar
+        </button>
+      }
+      @if (isRunning) {
+        <button class="btn btn-glass" (click)="pause()">⏸ Pausar</button>
+        <button class="btn btn-danger" (click)="stop()">⏹ Finalizar</button>
+      }
+      @if (!isRunning && elapsed > 0) {
+        <button class="btn btn-success" (click)="resume()">▶ Continuar</button>
+        <button class="btn btn-primary" (click)="stop()">💾 Salvar</button>
+        <button class="btn btn-glass" (click)="reset()">↺ Resetar</button>
+      }
+    </div>
+
+    <!-- Item Stats -->
+    @if (selectedItem) {
+      <div class="item-stats-bar">
+        <div class="item-stat">
+          <div class="istat-value">{{ formatMin(selectedItem.totalStudySeconds) }}</div>
+          <div class="istat-label">Total estudado</div>
+        </div>
+        <div class="item-stat">
+          <div class="istat-value">{{ selectedItem.studyCount }}</div>
+          <div class="istat-label">Sessões</div>
+        </div>
+        <div class="item-stat">
+          <div class="istat-value">{{ selectedItem.lastStudiedAt ? (selectedItem.lastStudiedAt | date:'dd/MM') : '—' }}</div>
+          <div class="istat-label">Última vez</div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Today's Sessions -->
+  <div class="sessions-panel">
+    <div class="glass-card">
+      <div class="flex justify-between items-center mb-16">
+        <h3 class="section-title">📋 Sessões de Hoje</h3>
+        <div class="total-badge">
+          <span>Total: </span>
+          <strong>{{ formatMin(totalTodayTime) }}</strong>
+        </div>
+      </div>
+
+      @if (todaySessions.length === 0) {
+        <div class="empty-state" style="padding: 40px 0">
+          <div class="empty-icon">⏳</div>
+          <div class="empty-text">Nenhuma sessão hoje</div>
+        </div>
+      }
+
+      <div class="sessions-list">
+        @for (s of todaySessions; track s.id) {
+          <div class="session-card">
+            <div class="session-info">
+              <div class="session-item">{{ s.topicItem?.name || 'Item desconhecido' }}</div>
+              <div class="session-meta">{{ s.topicItem?.topic?.name }}</div>
+              @if (s.notes) {
+                <div class="session-notes">{{ s.notes }}</div>
+              }
+            </div>
+            <div class="session-right">
+              <div class="session-duration">{{ formatMin(s.durationSeconds) }}</div>
+              <button class="btn-icon" (click)="deleteSession(s.id)" title="Remover">🗑️</button>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

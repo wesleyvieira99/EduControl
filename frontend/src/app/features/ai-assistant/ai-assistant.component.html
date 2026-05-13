@@ -1,0 +1,136 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">🤖 Assistente de IA</h1>
+    <p class="page-subtitle">Gere perguntas, exercícios e resumos com inteligência artificial</p>
+  </div>
+</div>
+
+<div class="ai-layout">
+  <!-- Config Panel -->
+  <div class="config-panel glass-card">
+    <h3 class="panel-title">Configurar Geração</h3>
+
+    <!-- Subject/Topic/Item selectors -->
+    <div class="form-group">
+      <label>Matéria</label>
+      <select [(ngModel)]="selectedSubjectId" (ngModelChange)="onSubjectChange()">
+        <option [ngValue]="null">Selecione a matéria...</option>
+        @for (s of subjects; track s.id) {
+          <option [ngValue]="s.id">{{ s.emoji }} {{ s.name }}</option>
+        }
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Tema (opcional)</label>
+      <select [(ngModel)]="selectedTopicId" (ngModelChange)="onTopicChange()" [disabled]="!selectedSubjectId">
+        <option [ngValue]="null">Todos os temas</option>
+        @for (t of topics; track t.id) {
+          <option [ngValue]="t.id">{{ t.name }}</option>
+        }
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Conteúdo (opcional)</label>
+      <select [(ngModel)]="selectedItemId" (ngModelChange)="onItemChange()" [disabled]="!selectedTopicId">
+        <option [ngValue]="null">Todo o tema</option>
+        @for (item of topicItems; track item.id) {
+          <option [ngValue]="item.id">{{ item.name }}</option>
+        }
+      </select>
+    </div>
+
+    <!-- Type -->
+    <div class="form-group">
+      <label>Tipo de Conteúdo</label>
+      <div class="type-grid">
+        @for (t of types; track t.value) {
+          <button class="type-btn" [class.active]="request.type === t.value" (click)="request.type = t.value">
+            <span class="type-emoji">{{ t.label }}</span>
+            <span class="type-desc">{{ t.desc }}</span>
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Difficulty -->
+    <div class="form-group">
+      <label>Dificuldade</label>
+      <div class="diff-row">
+        @for (d of difficulties; track d.value) {
+          <button class="diff-btn" [class.active]="request.difficulty === d.value" (click)="request.difficulty = d.value">{{ d.label }}</button>
+        }
+      </div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="form-group">
+      <label>Quantidade</label>
+      <div class="qty-row">
+        @for (q of [3,5,10,15]; track q) {
+          <button class="qty-btn" [class.active]="request.quantity === q" (click)="request.quantity = q">{{ q }}</button>
+        }
+      </div>
+    </div>
+
+    <!-- Additional Context -->
+    <div class="form-group">
+      <label>Contexto adicional (opcional)</label>
+      <textarea [(ngModel)]="request.additionalContext" placeholder="Ex: foque em derivadas parciais..." rows="3"></textarea>
+    </div>
+
+    <button class="btn btn-primary generate-btn" (click)="generate()" [disabled]="loading || (!request.subjectName && !request.topicName)">
+      @if (loading) { <span class="loading-spinner-sm"></span> Gerando... }
+      @else { ✨ Gerar com IA }
+    </button>
+  </div>
+
+  <!-- Result Panel -->
+  <div class="result-panel">
+    @if (result) {
+      <div class="glass-card result-card">
+        <div class="result-header">
+          <h3 class="panel-title">Resultado</h3>
+          <button class="btn btn-glass btn-sm" (click)="copyResult()" title="Copiar">📋 Copiar</button>
+        </div>
+        <div class="result-content" [innerHTML]="formatContent(result)"></div>
+      </div>
+    }
+
+    @if (!result && !loading) {
+      <div class="empty-result glass-card">
+        <div class="empty-icon">🤖</div>
+        <div class="empty-title">Pronto para gerar</div>
+        <div class="empty-sub">Configure os parâmetros ao lado e clique em "Gerar com IA"</div>
+      </div>
+    }
+
+    @if (loading) {
+      <div class="loading-result glass-card">
+        <div class="ai-thinking">
+          <div class="thinking-dot"></div>
+          <div class="thinking-dot"></div>
+          <div class="thinking-dot"></div>
+        </div>
+        <div class="loading-text">IA gerando conteúdo...</div>
+      </div>
+    }
+
+    <!-- Message History -->
+    @if (messages.length > 0) {
+      <div class="history-panel glass-card">
+        <div class="flex justify-between items-center mb-12">
+          <h4 class="history-title">Histórico</h4>
+          <button class="btn btn-glass btn-sm" (click)="clearHistory()">Limpar</button>
+        </div>
+        <div class="history-list">
+          @for (m of messages; track $index) {
+            <div class="history-msg" [class.user]="m.role === 'user'">
+              <div class="msg-role">{{ m.role === 'user' ? '👤' : '🤖' }}</div>
+              <div class="msg-text">{{ m.content.slice(0, 120) }}{{ m.content.length > 120 ? '...' : '' }}</div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>

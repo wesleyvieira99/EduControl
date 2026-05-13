@@ -1,0 +1,128 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">📚 Biblioteca</h1>
+    <p class="page-subtitle">Artigos, livros, excertos e recursos de estudo</p>
+  </div>
+  <button class="btn btn-primary" (click)="openCreate()">+ Adicionar</button>
+</div>
+
+<!-- Filters -->
+<div class="filters glass-card">
+  <div class="search-bar">
+    <span>🔍</span>
+    <input class="search-input" [(ngModel)]="search" (ngModelChange)="loadItems()" placeholder="Buscar na biblioteca..." />
+    @if (search) { <button class="btn-icon" (click)="search=''; loadItems()">✕</button> }
+  </div>
+  <div class="type-filters">
+    <button class="type-btn" [class.active]="filterType === ''" (click)="filterType=''; loadItems()">Todos</button>
+    @for (t of types; track t.value) {
+      <button class="type-btn" [class.active]="filterType === t.value" (click)="filterType = t.value; loadItems()">
+        {{ t.icon }} {{ t.label }}
+      </button>
+    }
+  </div>
+  <select [(ngModel)]="filterSubjectId" (ngModelChange)="loadItems()">
+    <option [ngValue]="null">Todas as matérias</option>
+    @for (s of subjects; track s.id) {
+      <option [ngValue]="s.id">{{ s.name }}</option>
+    }
+  </select>
+</div>
+
+<!-- Items Grid -->
+@if (loading) {
+  <div class="loading-overlay" style="height:200px"><div class="loading-spinner"></div></div>
+}
+
+@if (!loading && items.length === 0) {
+  <div class="empty-state" style="padding: 80px 0">
+    <div class="empty-icon">📭</div>
+    <div class="empty-text">Nenhum item encontrado</div>
+  </div>
+}
+
+<div class="library-grid">
+  @for (item of items; track item.id) {
+    <div class="library-card glass-card" (click)="openEdit(item)">
+      <div class="card-type-badge">
+        <span class="type-icon">{{ getTypeInfo(item.type).icon }}</span>
+        <span class="type-label">{{ getTypeInfo(item.type).label }}</span>
+      </div>
+      <div class="card-title">{{ item.title }}</div>
+      @if (item.author) {
+        <div class="card-author">por {{ item.author }}</div>
+      }
+      @if (item.content) {
+        <div class="card-content">{{ item.content }}</div>
+      }
+      <div class="card-footer">
+        @if (item.subjectId) {
+          <span class="chip">{{ getSubjectName(item.subjectId) }}</span>
+        }
+        @if (item.url) {
+          <button class="btn btn-glass btn-sm" (click)="openUrl(item.url, $event)">🔗 Abrir</button>
+        }
+        <button class="btn-icon ml-auto" (click)="$event.stopPropagation(); delete(item)" title="Excluir">🗑️</button>
+      </div>
+    </div>
+  }
+</div>
+
+<!-- Modal -->
+@if (showModal) {
+  <div class="modal-overlay" (click)="showModal = false">
+    <div class="modal-content modal-large" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ editingItem ? 'Editar Item' : 'Novo Item' }}</h2>
+        <button class="btn-icon" (click)="showModal = false">✕</button>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <div class="form-group">
+          <label>Tipo</label>
+          <div class="type-grid">
+            @for (t of types; track t.value) {
+              <button class="type-select-btn" [class.selected]="itemForm.type === t.value" (click)="itemForm.type = t.value">
+                {{ t.icon }} {{ t.label }}
+              </button>
+            }
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Título *</label>
+          <input [(ngModel)]="itemForm.title" placeholder="Título do item" />
+        </div>
+        <div class="form-group">
+          <label>Autor</label>
+          <input [(ngModel)]="itemForm.author" placeholder="Autor (opcional)" />
+        </div>
+        <div class="form-group">
+          <label>URL / Link</label>
+          <input [(ngModel)]="itemForm.url" placeholder="https://..." type="url" />
+        </div>
+        <div class="form-group">
+          <label>Conteúdo / Resumo</label>
+          <textarea [(ngModel)]="itemForm.content" placeholder="Conteúdo, resumo ou excerto..." rows="6"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Matéria</label>
+          <select [(ngModel)]="itemForm.subjectId">
+            <option [ngValue]="undefined">Nenhuma</option>
+            @for (s of subjects; track s.id) {
+              <option [ngValue]="s.id">{{ s.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tags (separadas por vírgula)</label>
+          <input [(ngModel)]="itemForm.tags" placeholder="Ex: cálculo, integral, exercícios" />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-glass" (click)="showModal = false">Cancelar</button>
+        <button class="btn btn-primary" (click)="save()">{{ editingItem ? 'Salvar' : 'Adicionar' }}</button>
+      </div>
+    </div>
+  </div>
+}

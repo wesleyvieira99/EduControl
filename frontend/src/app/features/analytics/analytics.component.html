@@ -1,0 +1,127 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">📊 Análise de Dados</h1>
+    <p class="page-subtitle">Visualize seu progresso de estudos</p>
+  </div>
+</div>
+
+@if (loading) {
+  <div class="loading-overlay" style="height:300px"><div class="loading-spinner"></div></div>
+}
+
+@if (!loading) {
+  <!-- Stats Row -->
+  @if (dashboard) {
+    <div class="stats-row mb-24">
+      <div class="stat-card glass-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-body">
+          <div class="stat-value">{{ formatTime(dashboard.totalStudySecondsToday) }}</div>
+          <div class="stat-label">Hoje</div>
+        </div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-icon">📆</div>
+        <div class="stat-body">
+          <div class="stat-value">{{ formatTime(dashboard.totalStudySecondsWeek) }}</div>
+          <div class="stat-label">Esta Semana</div>
+        </div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-icon">🗓️</div>
+        <div class="stat-body">
+          <div class="stat-value">{{ formatTime(dashboard.totalStudySecondsMonth) }}</div>
+          <div class="stat-label">Este Mês</div>
+        </div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-body">
+          <div class="stat-value">{{ dashboard.totalSessionsToday }}</div>
+          <div class="stat-label">Sessões Hoje</div>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Charts Row -->
+  <div class="charts-row mb-24">
+    <!-- 7-day bar -->
+    @if (dashboard?.weeklyStats?.length) {
+      <div class="glass-card chart-box">
+        <h3 class="card-title">Últimos 7 Dias</h3>
+        <div class="bar-chart">
+          @for (d of dashboard!.weeklyStats; track d.date) {
+            <div class="bar-col">
+              <div class="bar-value">{{ d.durationSeconds > 0 ? formatTime(d.durationSeconds) : '' }}</div>
+              <div class="bar-wrap">
+                <div class="bar-fill" [style.height.%]="(d.durationSeconds / maxDaySeconds) * 100"></div>
+              </div>
+              <div class="bar-label">{{ d.date | date:'EEE':'':'pt' }}</div>
+            </div>
+          }
+        </div>
+      </div>
+    }
+
+    <!-- Doughnut -->
+    @if (dashboard?.subjectStats?.length) {
+      <div class="glass-card chart-box">
+        <h3 class="card-title">Por Matéria</h3>
+        <div class="doughnut-wrap">
+          <canvas #subjectChart></canvas>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Calendar Heatmap -->
+  @if (calendarWeeks.length > 0) {
+    <div class="glass-card mb-24">
+      <h3 class="card-title">Mapa de Atividades (12 meses)</h3>
+      <div class="heatmap-scroll">
+        <div class="heatmap">
+          @for (week of calendarWeeks; track $index) {
+            <div class="heatmap-week">
+              @for (day of week; track day.date) {
+                <div
+                  class="heatmap-day"
+                  [style.background]="getLevelColor(day.level)"
+                  [title]="getTooltip(day)"
+                ></div>
+              }
+            </div>
+          }
+        </div>
+        <div class="heatmap-legend">
+          <span class="legend-label">Menos</span>
+          <div class="legend-cell" style="background:transparent;border:1px solid rgba(255,255,255,0.1)"></div>
+          <div class="legend-cell" style="background:#312e81"></div>
+          <div class="legend-cell" style="background:#6366f1"></div>
+          <div class="legend-cell" style="background:#a5b4fc"></div>
+          <span class="legend-label">Mais</span>
+        </div>
+      </div>
+    </div>
+  }
+
+  <!-- Subject Stats Table -->
+  @if (dashboard?.subjectStats?.length) {
+    <div class="glass-card">
+      <h3 class="card-title">Tempo por Matéria</h3>
+      <div class="subject-table">
+        @for (s of dashboard!.subjectStats; track s.subjectId) {
+          <div class="subject-row">
+            <div class="subject-dot" [style.background]="s.color || '#6366f1'"></div>
+            <div class="subject-name">{{ s.subjectName }}</div>
+            <div class="subject-bar-wrap">
+              <div class="subject-bar" [style.width.%]="(s.totalSeconds / (dashboard!.subjectStats[0].totalSeconds || 1)) * 100" [style.background]="s.color || '#6366f1'"></div>
+            </div>
+            <div class="subject-time">{{ formatTime(s.totalSeconds) }}</div>
+            <div class="subject-sessions text-muted text-sm">{{ s.sessionsCount }} sess.</div>
+          </div>
+        }
+      </div>
+    </div>
+  }
+}

@@ -1,0 +1,246 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">📚 Matérias</h1>
+    <p class="page-subtitle">Gerencie suas matérias, temas e conteúdos</p>
+  </div>
+  <button class="btn btn-primary" (click)="openCreateSubject()">+ Nova Matéria</button>
+</div>
+
+<div class="subjects-layout">
+  <!-- Subjects Column -->
+  <div class="column glass-card">
+    <div class="column-header">
+      <h3>Matérias</h3>
+      <span class="badge badge-purple">{{ subjects.length }}</span>
+    </div>
+
+    @if (loading) {
+      <div class="loading-overlay"><div class="loading-spinner"></div></div>
+    }
+
+    @if (!loading && subjects.length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">📚</div>
+        <div class="empty-text">Nenhuma matéria cadastrada</div>
+      </div>
+    }
+
+    <div class="item-list">
+      @for (s of subjects; track s.id) {
+        <div class="subject-item" [class.active]="selectedSubject?.id === s.id" (click)="selectSubject(s)">
+          <div class="subject-emoji" [style.background]="s.color + '33'">{{ s.emoji }}</div>
+          <div class="subject-info">
+            <div class="subject-name">{{ s.name }}</div>
+            @if (s.description) {
+              <div class="subject-desc text-sm text-muted">{{ s.description }}</div>
+            }
+          </div>
+          <div class="item-actions">
+            <button class="btn-icon" (click)="openEditSubject(s, $event)" title="Editar">✏️</button>
+            <button class="btn-icon" (click)="deleteSubject(s, $event)" title="Excluir">🗑️</button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Topics Column -->
+  <div class="column glass-card" [class.disabled]="!selectedSubject">
+    <div class="column-header">
+      <h3>Temas @if (selectedSubject) { <span class="text-muted text-sm">— {{ selectedSubject.name }}</span> }</h3>
+      <div class="flex gap-8 items-center">
+        <span class="badge badge-purple">{{ topics.length }}</span>
+        @if (selectedSubject) {
+          <button class="btn btn-primary btn-sm" (click)="openCreateTopic()">+ Tema</button>
+        }
+      </div>
+    </div>
+
+    @if (!selectedSubject) {
+      <div class="empty-state">
+        <div class="empty-icon">👈</div>
+        <div class="empty-text">Selecione uma matéria</div>
+      </div>
+    }
+
+    @if (selectedSubject && topics.length === 0) {
+      <div class="empty-state">
+        <div class="empty-text">Nenhum tema cadastrado</div>
+      </div>
+    }
+
+    <div class="item-list">
+      @for (t of topics; track t.id) {
+        <div class="topic-item" [class.active]="selectedTopic?.id === t.id" (click)="selectTopic(t)">
+          <div class="topic-info">
+            <div class="topic-name">{{ t.name }}</div>
+            <div class="topic-meta flex gap-8" style="margin-top: 6px; flex-wrap: wrap">
+              @for (day of getWeekDayBadges(t.weekDays); track day) {
+                <span class="chip">{{ day }}</span>
+              }
+            </div>
+          </div>
+          <div class="item-actions">
+            <button class="btn-icon" (click)="openEditTopic(t, $event)">✏️</button>
+            <button class="btn-icon" (click)="deleteTopic(t, $event)">🗑️</button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Topic Items Column -->
+  <div class="column glass-card" [class.disabled]="!selectedTopic">
+    <div class="column-header">
+      <h3>Conteúdos @if (selectedTopic) { <span class="text-muted text-sm">— {{ selectedTopic.name }}</span> }</h3>
+      <div class="flex gap-8 items-center">
+        <span class="badge badge-purple">{{ topicItems.length }}</span>
+        @if (selectedTopic) {
+          <button class="btn btn-primary btn-sm" (click)="openCreateItem()">+ Item</button>
+        }
+      </div>
+    </div>
+
+    @if (!selectedTopic) {
+      <div class="empty-state">
+        <div class="empty-icon">👈</div>
+        <div class="empty-text">Selecione um tema</div>
+      </div>
+    }
+
+    @if (selectedTopic && topicItems.length === 0) {
+      <div class="empty-state">
+        <div class="empty-text">Nenhum conteúdo cadastrado</div>
+      </div>
+    }
+
+    <div class="item-list">
+      @for (item of topicItems; track item.id) {
+        <div class="topic-item">
+          <div class="topic-info">
+            <div class="topic-name">{{ item.name }}</div>
+            <div class="item-stats flex gap-12" style="margin-top: 6px">
+              <span class="text-sm text-muted">⏱ {{ formatTime(item.totalStudySeconds) }}</span>
+              <span class="text-sm text-muted">📖 {{ item.studyCount }}x</span>
+              <span class="text-sm text-muted">🕐 {{ formatLastStudied(item.lastStudiedAt) }}</span>
+            </div>
+          </div>
+          <div class="item-actions">
+            <button class="btn-icon" (click)="openEditItem(item, $event)">✏️</button>
+            <button class="btn-icon" (click)="deleteItem(item, $event)">🗑️</button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
+<!-- Subject Modal -->
+@if (showSubjectModal) {
+  <div class="modal-overlay" (click)="showSubjectModal = false">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ editingSubject ? 'Editar Matéria' : 'Nova Matéria' }}</h2>
+        <button class="btn-icon" (click)="showSubjectModal = false">✕</button>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <div class="form-group">
+          <label>Nome *</label>
+          <input [(ngModel)]="subjectForm.name" placeholder="Ex: Matemática" />
+        </div>
+        <div class="form-group">
+          <label>Descrição</label>
+          <textarea [(ngModel)]="subjectForm.description" placeholder="Descrição opcional" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Emoji</label>
+          <div class="emoji-grid">
+            @for (e of emojiOptions; track e) {
+              <button class="emoji-btn" [class.selected]="subjectForm.emoji === e" (click)="subjectForm.emoji = e">{{ e }}</button>
+            }
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Cor</label>
+          <div class="color-grid">
+            @for (c of colorOptions; track c) {
+              <button class="color-btn" [style.background]="c" [class.selected]="subjectForm.color === c" (click)="subjectForm.color = c">
+                @if (subjectForm.color === c) { <span>✓</span> }
+              </button>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-glass" (click)="showSubjectModal = false">Cancelar</button>
+        <button class="btn btn-primary" (click)="saveSubject()">{{ editingSubject ? 'Salvar' : 'Criar' }}</button>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Topic Modal -->
+@if (showTopicModal) {
+  <div class="modal-overlay" (click)="showTopicModal = false">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ editingTopic ? 'Editar Tema' : 'Novo Tema' }}</h2>
+        <button class="btn-icon" (click)="showTopicModal = false">✕</button>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <div class="form-group">
+          <label>Nome *</label>
+          <input [(ngModel)]="topicForm.name" placeholder="Ex: Álgebra Linear" />
+        </div>
+        <div class="form-group">
+          <label>Descrição</label>
+          <textarea [(ngModel)]="topicForm.description" placeholder="Descrição opcional" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Dias da Semana para Estudo</label>
+          <div class="weekday-grid">
+            @for (day of weekDayLabels; track $index) {
+              <button class="weekday-btn" [class.selected]="selectedWeekDays[$index]" (click)="toggleWeekDay($index)">{{ day }}</button>
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-glass" (click)="showTopicModal = false">Cancelar</button>
+        <button class="btn btn-primary" (click)="saveTopic()">{{ editingTopic ? 'Salvar' : 'Criar' }}</button>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Item Modal -->
+@if (showItemModal) {
+  <div class="modal-overlay" (click)="showItemModal = false">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ editingItem ? 'Editar Conteúdo' : 'Novo Conteúdo' }}</h2>
+        <button class="btn-icon" (click)="showItemModal = false">✕</button>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <div class="form-group">
+          <label>Nome *</label>
+          <input [(ngModel)]="itemForm.name" placeholder="Ex: Matrizes e Determinantes" />
+        </div>
+        <div class="form-group">
+          <label>Descrição</label>
+          <textarea [(ngModel)]="itemForm.description" placeholder="Descrição opcional" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-glass" (click)="showItemModal = false">Cancelar</button>
+        <button class="btn btn-primary" (click)="saveItem()">{{ editingItem ? 'Salvar' : 'Criar' }}</button>
+      </div>
+    </div>
+  </div>
+}

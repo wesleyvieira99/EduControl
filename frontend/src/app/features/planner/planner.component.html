@@ -1,0 +1,99 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">📅 Planejamento Semanal</h1>
+    <p class="page-subtitle">Organize seus estudos por dia da semana</p>
+  </div>
+</div>
+
+<div class="week-grid">
+  @for (day of days; track day.index) {
+    <div class="day-col glass-card" [class.today]="day.index === todayIndex">
+      <div class="day-header">
+        <div>
+          <div class="day-name">{{ day.label }}</div>
+          @if (day.plans.length > 0) {
+            <div class="day-total">{{ totalMinutes(day) }}min</div>
+          }
+        </div>
+        <button class="btn-icon" (click)="openAddPlan(day.index)" title="Adicionar">+</button>
+      </div>
+
+      @if (day.plans.length === 0) {
+        <div class="day-empty">
+          <span>Livre</span>
+        </div>
+      }
+
+      <div class="plan-list">
+        @for (plan of day.plans; track plan.id) {
+          <div class="plan-card" [style.border-left-color]="plan.topicItem?.topic?.subject?.color || '#6366f1'">
+            <div class="plan-info">
+              <div class="plan-name">{{ plan.topicItem?.name || '—' }}</div>
+              <div class="plan-subject">{{ plan.topicItem?.topic?.subject?.name }}</div>
+              @if (plan.plannedMinutes) {
+                <div class="plan-time">⏱ {{ plan.plannedMinutes }}min</div>
+              }
+            </div>
+            <div class="plan-actions">
+              <button class="btn-icon sm" (click)="openEditPlan(plan, day.index)">✏️</button>
+              <button class="btn-icon sm" (click)="deletePlan(plan, day.index)">✕</button>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>
+
+<!-- Add/Edit Plan Modal -->
+@if (showModal) {
+  <div class="modal-overlay" (click)="showModal = false">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h2>{{ editingPlan ? 'Editar Plano' : 'Adicionar ao ' + days[selectedDayIndex].label }}</h2>
+        <button class="btn-icon" (click)="showModal = false">✕</button>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        @if (!editingPlan) {
+          <div class="form-group">
+            <label>Matéria</label>
+            <select [(ngModel)]="modalSubjectId" (ngModelChange)="onModalSubjectChange()">
+              <option [ngValue]="null">Selecione a matéria...</option>
+              @for (s of subjects; track s.id) {
+                <option [ngValue]="s.id">{{ s.emoji }} {{ s.name }}</option>
+              }
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tema</label>
+            <select [(ngModel)]="modalTopicId" (ngModelChange)="onModalTopicChange()" [disabled]="!modalSubjectId">
+              <option [ngValue]="null">Selecione o tema...</option>
+              @for (t of topics; track t.id) {
+                <option [ngValue]="t.id">{{ t.name }}</option>
+              }
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Conteúdo</label>
+            <select [(ngModel)]="planForm.topicItemId" [disabled]="!modalTopicId">
+              <option [ngValue]="undefined">Selecione o conteúdo...</option>
+              @for (item of topicItems; track item.id) {
+                <option [ngValue]="item.id">{{ item.name }}</option>
+              }
+            </select>
+          </div>
+        }
+        <div class="form-group">
+          <label>Minutos Planejados</label>
+          <input type="number" [(ngModel)]="planForm.plannedMinutes" min="5" max="480" step="5" />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-glass" (click)="showModal = false">Cancelar</button>
+        <button class="btn btn-primary" (click)="savePlan()">{{ editingPlan ? 'Salvar' : 'Adicionar' }}</button>
+      </div>
+    </div>
+  </div>
+}

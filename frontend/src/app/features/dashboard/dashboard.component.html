@@ -1,0 +1,153 @@
+<div class="page-header">
+  <div>
+    <h1 class="page-title">Dashboard ⚡</h1>
+    <p class="page-subtitle">{{ today | date:'EEEE, d \'de\' MMMM':'':'pt-BR' }}</p>
+  </div>
+  <button class="btn btn-glass btn-sm" (click)="load()">↻ Atualizar</button>
+</div>
+
+@if (loading) {
+  <div class="loading-overlay">
+    <div class="loading-spinner"></div>
+    <span>Carregando...</span>
+  </div>
+}
+
+@if (!loading && data) {
+  <!-- Stats Row -->
+  <div class="grid-4 mb-stats">
+    <div class="stat-card">
+      <div class="stat-icon">⏱️</div>
+      <div class="stat-value">{{ formatTime(data.totalStudySecondsToday) }}</div>
+      <div class="stat-label">Estudado Hoje</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📅</div>
+      <div class="stat-value">{{ formatTime(data.totalStudySecondsWeek) }}</div>
+      <div class="stat-label">Esta Semana</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📚</div>
+      <div class="stat-value">{{ data.totalSubjects }}</div>
+      <div class="stat-label">Matérias</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">✅</div>
+      <div class="stat-value">{{ data.totalSessionsToday }}</div>
+      <div class="stat-label">Sessões Hoje</div>
+    </div>
+  </div>
+
+  <!-- Charts Row -->
+  <div class="grid-2 charts-row">
+    <!-- Weekly Bar Chart -->
+    <div class="glass-card">
+      <h3 class="card-title">📈 Últimos 7 Dias</h3>
+      <div class="bar-chart">
+        @for (stat of data.weeklyStats; track stat.date) {
+          <div class="bar-col">
+            <div class="bar-wrap">
+              <div class="bar-fill"
+                [style.height.%]="getBarHeight(stat)"
+                [class.today]="stat.date === (today | date:'yyyy-MM-dd')"
+                [title]="formatTime(stat.durationSeconds)">
+              </div>
+            </div>
+            <div class="bar-label">{{ getDayShort(stat.date) }}</div>
+            <div class="bar-value">{{ formatTime(stat.durationSeconds) }}</div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Subject Distribution -->
+    <div class="glass-card">
+      <h3 class="card-title">🎯 Por Matéria</h3>
+      @if (data.subjectStats.length === 0) {
+        <div class="empty-state" style="padding: 30px 0">
+          <div class="empty-text">Nenhuma sessão registrada ainda</div>
+        </div>
+      }
+      <div class="subject-list">
+        @for (s of data.subjectStats; track s.subjectId) {
+          <div class="subject-row">
+            <div class="subject-info">
+              <div class="subject-dot" [style.background]="s.color"></div>
+              <span class="subject-name">{{ s.subjectName }}</span>
+            </div>
+            <div class="subject-bar-wrap">
+              <div class="subject-bar" [style.width.%]="getTotalPct(s.totalSeconds)" [style.background]="s.color + '88'"></div>
+            </div>
+            <span class="subject-time">{{ formatTime(s.totalSeconds) }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <div class="glass-card mt-activity">
+    <div class="flex justify-between items-center mb-16">
+      <h3 class="card-title">🕐 Atividade Recente</h3>
+      <a routerLink="/analytics" class="btn btn-glass btn-sm">Ver tudo</a>
+    </div>
+
+    @if (data.recentActivity.length === 0) {
+      <div class="empty-state">
+        <div class="empty-icon">📖</div>
+        <div class="empty-title">Nenhuma atividade</div>
+        <div class="empty-text">Comece uma sessão de estudos!</div>
+      </div>
+    }
+
+    <div class="activity-list">
+      @for (a of data.recentActivity; track a.sessionId) {
+        <div class="activity-item">
+          <div class="activity-dot" [style.background]="a.subjectColor"></div>
+          <div class="activity-info">
+            <div class="activity-title">{{ a.topicItemName }}</div>
+            <div class="activity-meta">{{ a.topicName }} · {{ a.subjectName }}</div>
+          </div>
+          <div class="activity-right">
+            <div class="activity-time">{{ formatTime(a.durationSeconds) }}</div>
+            <div class="activity-date">{{ formatDate(a.studyDate) }}</div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="quick-actions">
+    <h3 class="card-title" style="margin-bottom: 16px">⚡ Acesso Rápido</h3>
+    <div class="grid-4">
+      <a routerLink="/timer" class="quick-action-card glass-card">
+        <span class="qa-icon">⏱️</span>
+        <span class="qa-label">Iniciar Timer</span>
+      </a>
+      <a routerLink="/planner" class="quick-action-card glass-card">
+        <span class="qa-icon">📅</span>
+        <span class="qa-label">Planner</span>
+      </a>
+      <a routerLink="/notes" class="quick-action-card glass-card">
+        <span class="qa-icon">📝</span>
+        <span class="qa-label">Anotações</span>
+      </a>
+      <a routerLink="/ai" class="quick-action-card glass-card">
+        <span class="qa-icon">🤖</span>
+        <span class="qa-label">IA Assistente</span>
+      </a>
+    </div>
+  </div>
+}
+
+@if (!loading && !data) {
+  <div class="glass-card">
+    <div class="empty-state">
+      <div class="empty-icon">⚡</div>
+      <div class="empty-title">Backend não encontrado</div>
+      <div class="empty-text">Inicie o servidor Spring Boot na porta 8080</div>
+      <button class="btn btn-primary" (click)="load()">Tentar novamente</button>
+    </div>
+  </div>
+}

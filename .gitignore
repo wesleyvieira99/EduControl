@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+target/
+*.class
+
+# Build outputs
+frontend/dist/
+frontend/.angular/
+
+# IDE & OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# H2 data (local only)
+backend/data/
+
+# Environment / secrets
+.env
+*.env.local
+
+# macOS app icon temp
+EduControl.iconset/
+EduControl.icns

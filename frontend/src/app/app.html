@@ -1,0 +1,67 @@
+<!-- Ambient background orbs (Apple TV style) -->
+<div class="bg-ambient" aria-hidden="true">
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+</div>
+
+<div class="app-shell" [class.sidebar-open]="sidebarOpen">
+  <!-- Mobile backdrop -->
+  @if (sidebarOpen) {
+    <div class="sidebar-backdrop" (click)="toggleSidebar()"></div>
+  }
+
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar glass-sidebar">
+    <div class="sidebar-header">
+      <a class="logo" href="#" (click)="$event.preventDefault()">
+        <div class="logo-app-icon">📚</div>
+        <div class="logo-text-group">
+          <span class="logo-name">EduControl</span>
+          <span class="logo-tag">Gestão de Estudos</span>
+        </div>
+      </a>
+      <button class="sidebar-close" (click)="toggleSidebar()" aria-label="Fechar menu">✕</button>
+    </div>
+
+    <span class="nav-section-label">Menu</span>
+    <div class="nav-links">
+      @for (item of navItems; track item.path) {
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+          class="nav-item"
+          (click)="sidebarOpen = false">
+          <span class="nav-icon" [innerHTML]="item.icon"></span>
+          <span class="nav-label">{{ item.label }}</span>
+        </a>
+      }
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span>Online</span>
+      </div>
+      <span class="version-badge">v1.0</span>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Topbar (mobile only) -->
+    <header class="topbar glass-topbar">
+      <button class="menu-btn" (click)="toggleSidebar()" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-logo">
+        <span>📚</span>
+        <span>EduControl</span>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <router-outlet />
+    </div>
+  </main>
+</div>
