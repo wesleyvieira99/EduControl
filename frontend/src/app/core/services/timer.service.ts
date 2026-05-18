@@ -21,20 +21,29 @@ export class TimerService {
   private timerSub?: Subscription;
   private _itemId: number | null = null;
 
+  // Timestamp-based tracking (imune ao throttle do Safari em background)
+  private _startTimestamp: number | null = null;  // Date.now() quando o run segment começou
+  private _pausedElapsed = 0;                      // segundos acumulados antes da pausa actual
+
   get elapsed()  { return this._elapsed.value; }
   get isRunning(){ return this._isRunning.value; }
   get item()     { return this._item.value; }
   get notes()    { return this._notes.value; }
   get itemId()   { return this._itemId; }
 
-  /** true quando há sessão activa (correndo OU pausada) */
   get hasActiveSession() {
     return this._itemId !== null && (this._isRunning.value || this._elapsed.value > 0);
   }
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService) {
+    // Quando o tab volta ao primeiro plano recalcula o elapsed imediatamente
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && this._isRunning.value && this._startTimestamp !== null) {
+        this._syncElapsed();
+      }
+    });
+  }
 
-  /** Registar o item a estudar (antes de start) */
   selectItem(itemId: number, item: TopicItem) {
     this._itemId = itemId;
     this._item.next(item);
@@ -44,6 +53,8 @@ export class TimerService {
 
   start() {
     if (!this._itemId || this._isRunning.value) return;
+    this._pausedElapsed  = 0;
+    this._startTimestamp = Date.now();
     this._elapsed.next(0);
     this._isRunning.next(true);
     this._tick();
@@ -51,6 +62,9 @@ export class TimerService {
 
   pause() {
     if (!this._isRunning.value) return;
+    this._syncElapsed();                      // garante valor exacto antes de pausar
+    this._pausedElapsed  = this._elapsed.value;
+    this._startTimestamp = null;
     this._isRunning.next(false);
     this.timerSub?.unsubscribe();
     this.timerSub = undefined;
@@ -58,12 +72,13 @@ export class TimerService {
 
   resume() {
     if (this._isRunning.value || this._elapsed.value === 0) return;
+    this._startTimestamp = Date.now();
     this._isRunning.next(true);
     this._tick();
   }
 
-  /** Finalizar: salva a sessão no backend e reseta o estado */
   stop() {
+    if (this._isRunning.value) this._syncElapsed();
     const itemId  = this._itemId;
     const elapsed = this._elapsed.value;
     const notes   = this._notes.value;
@@ -92,17 +107,24 @@ export class TimerService {
     this._reset();
   }
 
+  private _syncElapsed() {
+    if (this._startTimestamp === null) return;
+    const running = Math.floor((Date.now() - this._startTimestamp) / 1000);
+    this._elapsed.next(this._pausedElapsed + running);
+  }
+
   private _reset() {
     this._isRunning.next(false);
     this._elapsed.next(0);
     this._notes.next('');
     this._itemId = null;
     this._item.next(null);
+    this._startTimestamp = null;
+    this._pausedElapsed  = 0;
   }
 
   private _tick() {
-    this.timerSub = interval(1000).subscribe(() =>
-      this._elapsed.next(this._elapsed.value + 1)
-    );
+    // Intervalo de 500ms para menor atraso visual; o cálculo real usa Date.now()
+    this.timerSub = interval(500).subscribe(() => this._syncElapsed());
   }
 }
