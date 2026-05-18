@@ -9,43 +9,54 @@
   <!-- Timer Panel -->
   <div class="timer-panel glass-card">
 
-    <!-- Selection -->
-    <div class="selection-area">
-      <div class="form-group">
-        <label>Matéria</label>
-        <select [(ngModel)]="selectedSubjectId" (ngModelChange)="onSubjectChange()">
-          <option [ngValue]="null">Selecione a matéria...</option>
-          @for (s of subjects; track s.id) {
-            <option [ngValue]="s.id">{{ s.emoji }} {{ s.name }}</option>
-          }
-        </select>
+    <!-- Selection (only when NO active session) -->
+    @if (!timer.hasActiveSession) {
+      <div class="selection-area">
+        <div class="form-group">
+          <label>Matéria</label>
+          <select [(ngModel)]="selectedSubjectId" (ngModelChange)="onSubjectChange()">
+            <option [ngValue]="null">Selecione a matéria...</option>
+            @for (s of subjects; track s.id) {
+              <option [ngValue]="s.id">{{ s.emoji }} {{ s.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tema</label>
+          <select [(ngModel)]="selectedTopicId" (ngModelChange)="onTopicChange()" [disabled]="!selectedSubjectId">
+            <option [ngValue]="null">Selecione o tema...</option>
+            @for (t of topics; track t.id) {
+              <option [ngValue]="t.id">{{ t.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Conteúdo</label>
+          <select [(ngModel)]="selectedItemId" [disabled]="!selectedTopicId">
+            <option [ngValue]="null">Selecione o conteúdo...</option>
+            @for (item of topicItems; track item.id) {
+              <option [ngValue]="item.id">{{ item.name }}</option>
+            }
+          </select>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Tema</label>
-        <select [(ngModel)]="selectedTopicId" (ngModelChange)="onTopicChange()" [disabled]="!selectedSubjectId">
-          <option [ngValue]="null">Selecione o tema...</option>
-          @for (t of topics; track t.id) {
-            <option [ngValue]="t.id">{{ t.name }}</option>
-          }
-        </select>
+    }
+
+    <!-- Active session banner -->
+    @if (timer.hasActiveSession) {
+      <div class="active-session-banner">
+        <div class="asb-icon">📚</div>
+        <div class="asb-info">
+          <div class="asb-label">Estudando agora</div>
+          <div class="asb-item">{{ timer.item?.name }}</div>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Conteúdo</label>
-        <select [(ngModel)]="selectedItemId" (ngModelChange)="onItemChange()" [disabled]="!selectedTopicId">
-          <option [ngValue]="null">Selecione o conteúdo...</option>
-          @for (item of topicItems; track item.id) {
-            <option [ngValue]="item.id">{{ item.name }}</option>
-          }
-        </select>
-      </div>
-    </div>
+    }
 
     <!-- Clock Display -->
     <div class="clock-area" [class.running]="isRunning">
       <svg class="clock-ring" viewBox="0 0 240 240">
-        <!-- Background circle -->
         <circle cx="120" cy="120" r="110" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>
-        <!-- Progress circle -->
         <circle
           cx="120" cy="120" r="110"
           fill="none"
@@ -67,8 +78,8 @@
       <div class="clock-center">
         <div class="clock-time" [class.pulse]="isRunning">{{ displayTime }}</div>
         <div class="clock-label">{{ isRunning ? 'estudando...' : (elapsed > 0 ? 'pausado' : 'pronto') }}</div>
-        @if (selectedItem) {
-          <div class="clock-item">{{ selectedItem.name }}</div>
+        @if (timer.item) {
+          <div class="clock-item">{{ timer.item.name }}</div>
         }
       </div>
     </div>
@@ -77,7 +88,7 @@
     @if (isRunning || elapsed > 0) {
       <div class="form-group notes-field">
         <label>Anotação da Sessão</label>
-        <textarea [(ngModel)]="sessionNotes" placeholder="O que você estudou? Dúvidas, insights..." rows="2"></textarea>
+        <textarea [ngModel]="sessionNotes" (ngModelChange)="onNotesChange($event)" placeholder="O que você estudou? Dúvidas, insights..." rows="2"></textarea>
       </div>
     }
 
@@ -100,18 +111,18 @@
     </div>
 
     <!-- Item Stats -->
-    @if (selectedItem) {
+    @if (timer.item) {
       <div class="item-stats-bar">
         <div class="item-stat">
-          <div class="istat-value">{{ formatMin(selectedItem.totalStudySeconds) }}</div>
+          <div class="istat-value">{{ formatMin(timer.item.totalStudySeconds) }}</div>
           <div class="istat-label">Total estudado</div>
         </div>
         <div class="item-stat">
-          <div class="istat-value">{{ selectedItem.studyCount }}</div>
+          <div class="istat-value">{{ timer.item.studyCount }}</div>
           <div class="istat-label">Sessões</div>
         </div>
         <div class="item-stat">
-          <div class="istat-value">{{ selectedItem.lastStudiedAt ? (selectedItem.lastStudiedAt | date:'dd/MM') : '—' }}</div>
+          <div class="istat-value">{{ timer.item.lastStudiedAt ? (timer.item.lastStudiedAt | date:'dd/MM') : '—' }}</div>
           <div class="istat-label">Última vez</div>
         </div>
       </div>

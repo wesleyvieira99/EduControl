@@ -3,6 +3,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ApiService } from './core/services/api.service';
+import { FloatingTimerComponent } from './shared/components/floating-timer/floating-timer.component';
 
 interface NavItem { path: string; icon: SafeHtml; label: string; }
 
@@ -23,7 +24,7 @@ const ICONS: Record<string, string> = {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule, FloatingTimerComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

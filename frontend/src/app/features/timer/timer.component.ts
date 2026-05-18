@@ -2,8 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../core/services/api.service';
+import { TimerService } from '../../core/services/timer.service';
 import { Subject, Topic, TopicItem } from '../../core/models/models';
-import { interval, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-timer',
@@ -20,97 +21,65 @@ export class TimerComponent implements OnInit, OnDestroy {
   selectedSubjectId: number | null = null;
   selectedTopicId: number | null = null;
   selectedItemId: number | null = null;
-  selectedItem: TopicItem | null = null;
+
+  // Mirror of service state (updated via subscriptions)
+  elapsed  = 0;
+  isRunning = false;
   sessionNotes = '';
 
-  // Timer state
-  isRunning = false;
-  elapsed = 0; // seconds
-  private timerSub?: Subscription;
-  private startTime?: Date;
-
-  // Sessions history for today
   todaySessions: any[] = [];
 
-  constructor(private api: ApiService) {}
+  private subs: Subscription[] = [];
+
+  constructor(public timer: TimerService, private api: ApiService) {}
 
   ngOnInit() {
     this.api.getSubjects().subscribe(s => this.subjects = s);
     this.loadTodaySessions();
+
+    // Mirror timer service state into local vars (drives the template)
+    this.subs.push(
+      this.timer.elapsed$.subscribe(e => this.elapsed = e),
+      this.timer.isRunning$.subscribe(r => this.isRunning = r),
+      this.timer.notes$.subscribe(n => this.sessionNotes = n),
+      this.timer.sessionSaved$.subscribe(() => this.loadTodaySessions()),
+    );
   }
 
   ngOnDestroy() {
-    this.timerSub?.unsubscribe();
+    // Only unsubscribe UI subs — TimerService interval keeps running
+    this.subs.forEach(s => s.unsubscribe());
   }
 
   onSubjectChange() {
     this.selectedTopicId = null;
-    this.selectedItemId = null;
-    this.selectedItem = null;
-    this.topics = [];
-    this.topicItems = [];
-    if (this.selectedSubjectId) {
+    this.selectedItemId  = null;
+    this.topics      = [];
+    this.topicItems  = [];
+    if (this.selectedSubjectId)
       this.api.getTopics(this.selectedSubjectId).subscribe(t => this.topics = t);
-    }
   }
 
   onTopicChange() {
     this.selectedItemId = null;
-    this.selectedItem = null;
     this.topicItems = [];
-    if (this.selectedTopicId) {
+    if (this.selectedTopicId)
       this.api.getTopicItems(this.selectedTopicId).subscribe(i => this.topicItems = i);
-    }
-  }
-
-  onItemChange() {
-    this.selectedItem = this.topicItems.find(i => i.id === this.selectedItemId) || null;
   }
 
   start() {
     if (!this.selectedItemId) return;
-    this.isRunning = true;
-    this.startTime = new Date();
-    this.elapsed = 0;
-    this.timerSub = interval(1000).subscribe(() => this.elapsed++);
+    const item = this.topicItems.find(i => i.id === this.selectedItemId)!;
+    this.timer.selectItem(this.selectedItemId, item);
+    this.timer.start();
   }
 
-  pause() {
-    this.isRunning = false;
-    this.timerSub?.unsubscribe();
-  }
+  pause()  { this.timer.pause(); }
+  resume() { this.timer.resume(); }
+  stop()   { this.timer.stop(); }
+  reset()  { this.timer.reset(); }
 
-  resume() {
-    this.isRunning = true;
-    this.timerSub = interval(1000).subscribe(() => this.elapsed++);
-  }
-
-  stop() {
-    if (!this.selectedItemId || this.elapsed === 0) {
-      this.reset();
-      return;
-    }
-    this.timerSub?.unsubscribe();
-    this.isRunning = false;
-
-    const session = {
-      durationSeconds: this.elapsed,
-      notes: this.sessionNotes,
-      studyDate: new Date().toISOString().split('T')[0]
-    };
-
-    this.api.createSession(this.selectedItemId, session as any).subscribe(() => {
-      this.loadTodaySessions();
-      this.reset();
-    });
-  }
-
-  reset() {
-    this.timerSub?.unsubscribe();
-    this.isRunning = false;
-    this.elapsed = 0;
-    this.sessionNotes = '';
-  }
+  onNotesChange(notes: string) { this.timer.setNotes(notes); }
 
   loadTodaySessions() {
     const today = new Date().toISOString().split('T')[0];
@@ -122,9 +91,7 @@ export class TimerComponent implements OnInit, OnDestroy {
     this.api.deleteSession(id).subscribe(() => this.loadTodaySessions());
   }
 
-  get displayTime(): string {
-    return this.formatTime(this.elapsed);
-  }
+  get displayTime(): string { return this.formatTime(this.elapsed); }
 
   get totalTodayTime(): number {
     return this.todaySessions.reduce((a: number, s: any) => a + s.durationSeconds, 0);
@@ -146,7 +113,7 @@ export class TimerComponent implements OnInit, OnDestroy {
   }
 
   get timerProgress(): number {
-    const target = 25 * 60; // 25 min pomodoro
+    const target = 25 * 60;
     return Math.min(100, (this.elapsed / target) * 100);
   }
 
