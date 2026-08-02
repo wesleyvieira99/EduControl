@@ -67,13 +67,13 @@ FRONTEND="$PROJECT_DIR/frontend"
 
 # Se frontend já estiver rodando, só abre o navegador
 if lsof -i :4200 -t &>/dev/null 2>&1; then
-  open "http://localhost:4200"
+  open "http://localhost:4300"
   exit 0
 fi
 
 # Encerra processos órfãos nas portas antes de iniciar
 lsof -ti :8080 | xargs kill -9 2>/dev/null || true
-lsof -ti :4200 | xargs kill -9 2>/dev/null || true
+lsof -ti :4300 | xargs kill -9 2>/dev/null || true
 sleep 1
 
 # Notificação de início
@@ -92,7 +92,7 @@ on run argv
     set w1 to do script "clear; printf '\\033[1;35m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n  📚  EduControl — Backend  (porta 8080)\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\033[0m'; cd " & quoted form of backendDir & "; mvn spring-boot:run"
 
     -- Janela 2: Frontend (aguarda 20s para o backend subir)
-    set w2 to do script "clear; printf '\\033[1;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n  🎨  EduControl — Frontend  (porta 4200)\\n  Aguardando backend iniciar…\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\033[0m'; cd " & quoted form of frontendDir & "; sleep 20 && ng serve --host 0.0.0.0 --open"
+    set w2 to do script "clear; printf '\\033[1;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\n  🎨  EduControl — Frontend  (porta 4300)\\n  Aguardando backend iniciar…\\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\\033[0m'; cd " & quoted form of frontendDir & "; sleep 20 && ng serve --host 0.0.0.0 --open"
 
     -- Posiciona as janelas lado a lado
     try
@@ -119,7 +119,7 @@ echo "║  • Clique duplo em EduControl.app para abrir o sistema  ║"
 echo "║  • Ou arraste para /Applications para instalar          ║"
 echo "║                                                          ║"
 echo "║  No celular (mesma rede Wi-Fi):                          ║"
-echo "║  • Acesse http://<IP-do-mac>:4200                        ║"
+echo "║  • Acesse http://<IP-do-mac>:4300                        ║"
 echo "║  • iOS: botão Compartilhar → Adicionar à Tela de Início  ║"
 echo "║  • Android: menu ⋮ → Adicionar à tela inicial           ║"
 echo "╚══════════════════════════════════════════════════════════╝"
