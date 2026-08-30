@@ -1,0 +1,3161 @@
+{
+  "timestamp" : "2026-08-30T17:52:33.999757",
+  "version" : "1.0",
+  "subjects" : [ {
+    "id" : 227,
+    "name" : "Bancos de Dados",
+    "description" : "Tudo relacionado a banco de dados e uso de dados, além de estrutura e infra de dados.",
+    "color" : "#3b82f6",
+    "emoji" : "\uD83D\uDCCA",
+    "createdAt" : "2026-08-29T04:41:52.785803",
+    "updatedAt" : null
+  }, {
+    "id" : 228,
+    "name" : "SI e Infra",
+    "description" : "",
+    "color" : "#22c55e",
+    "emoji" : "\uD83D\uDCBB",
+    "createdAt" : "2026-08-29T04:41:52.786629",
+    "updatedAt" : null
+  }, {
+    "id" : 229,
+    "name" : "Backend e Arquitetura",
+    "description" : "",
+    "color" : "#6366f1",
+    "emoji" : "\uD83C\uDFDB️",
+    "createdAt" : "2026-08-29T04:41:52.786705",
+    "updatedAt" : null
+  }, {
+    "id" : 230,
+    "name" : "Ciencia de Dados",
+    "description" : "",
+    "color" : "#ec4899",
+    "emoji" : "\uD83E\uDDEC",
+    "createdAt" : "2026-08-29T04:41:52.787015",
+    "updatedAt" : null
+  }, {
+    "id" : 231,
+    "name" : "Frontend",
+    "description" : "",
+    "color" : "#eab308",
+    "emoji" : "\uD83C\uDFA8",
+    "createdAt" : "2026-08-29T04:41:52.787057",
+    "updatedAt" : null
+  }, {
+    "id" : 232,
+    "name" : "Testes e Esteiras (CICD)",
+    "description" : "",
+    "color" : "#3b82f6",
+    "emoji" : "\uD83D\uDCD0",
+    "createdAt" : "2026-08-29T04:41:52.787102",
+    "updatedAt" : null
+  }, {
+    "id" : 233,
+    "name" : "Mainframe",
+    "description" : "",
+    "color" : "#6366f1",
+    "emoji" : "⚗️",
+    "createdAt" : "2026-08-29T04:41:52.787141",
+    "updatedAt" : null
+  }, {
+    "id" : 234,
+    "name" : "Certificações ",
+    "description" : "",
+    "color" : "#f43f5e",
+    "emoji" : "\uD83D\uDCD6",
+    "createdAt" : "2026-08-29T04:41:52.787185",
+    "updatedAt" : null
+  }, {
+    "id" : 235,
+    "name" : "Inglês",
+    "description" : "",
+    "color" : "#f43f5e",
+    "emoji" : "\uD83D\uDCD6",
+    "createdAt" : "2026-08-29T04:41:52.787234",
+    "updatedAt" : null
+  }, {
+    "id" : 236,
+    "name" : "Algoritmos para Big Tech",
+    "description" : "",
+    "color" : "#f97316",
+    "emoji" : "\uD83D\uDD2C",
+    "createdAt" : "2026-08-29T04:41:52.787285",
+    "updatedAt" : null
+  } ],
+  "topics" : [ {
+    "id" : 4017,
+    "subjectId" : 227,
+    "name" : "[1] SGBD ANSI",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787383",
+    "updatedAt" : null
+  }, {
+    "id" : 4018,
+    "subjectId" : 227,
+    "name" : "[1] Relacional",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787509",
+    "updatedAt" : null
+  }, {
+    "id" : 4019,
+    "subjectId" : 227,
+    "name" : "[1] Álgebra Relacional",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787567",
+    "updatedAt" : null
+  }, {
+    "id" : 4020,
+    "subjectId" : 227,
+    "name" : "[1] Formas Normais",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787625",
+    "updatedAt" : null
+  }, {
+    "id" : 4021,
+    "subjectId" : 227,
+    "name" : "[2] Alteryx",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787676",
+    "updatedAt" : null
+  }, {
+    "id" : 4022,
+    "subjectId" : 227,
+    "name" : "[2] Transação",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787732",
+    "updatedAt" : null
+  }, {
+    "id" : 4023,
+    "subjectId" : 227,
+    "name" : "[2] NoSQL",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787787",
+    "updatedAt" : null
+  }, {
+    "id" : 4024,
+    "subjectId" : 227,
+    "name" : "[2] SQL",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787842",
+    "updatedAt" : null
+  }, {
+    "id" : 4025,
+    "subjectId" : 227,
+    "name" : "[3] Postgres",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787891",
+    "updatedAt" : null
+  }, {
+    "id" : 4026,
+    "subjectId" : 227,
+    "name" : "[3] MongoDB",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.787951",
+    "updatedAt" : null
+  }, {
+    "id" : 4027,
+    "subjectId" : 227,
+    "name" : "[3] Modelo Multidimensional",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788012",
+    "updatedAt" : null
+  }, {
+    "id" : 4028,
+    "subjectId" : 227,
+    "name" : "[3] Data Lake",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788065",
+    "updatedAt" : null
+  }, {
+    "id" : 4029,
+    "subjectId" : 227,
+    "name" : "[4] Big Data",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788114",
+    "updatedAt" : null
+  }, {
+    "id" : 4030,
+    "subjectId" : 227,
+    "name" : "[4] DB2",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788171",
+    "updatedAt" : null
+  }, {
+    "id" : 4031,
+    "subjectId" : 227,
+    "name" : "[4] SQL Server",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788228",
+    "updatedAt" : null
+  }, {
+    "id" : 4032,
+    "subjectId" : 227,
+    "name" : "[4] Spark e PySpark",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788277",
+    "updatedAt" : null
+  }, {
+    "id" : 4033,
+    "subjectId" : 227,
+    "name" : "[Extra] Apache Hadoop Ecosystem",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.78833",
+    "updatedAt" : null
+  }, {
+    "id" : 4034,
+    "subjectId" : 227,
+    "name" : "[Extra] DataMesh",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788383",
+    "updatedAt" : null
+  }, {
+    "id" : 4035,
+    "subjectId" : 227,
+    "name" : "[Extra] Azure Data",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788436",
+    "updatedAt" : null
+  }, {
+    "id" : 4036,
+    "subjectId" : 227,
+    "name" : "[Extra] AWS Data",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788494",
+    "updatedAt" : null
+  }, {
+    "id" : 4037,
+    "subjectId" : 228,
+    "name" : "[1] Ataques e Vulnerabilidades",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788554",
+    "updatedAt" : null
+  }, {
+    "id" : 4038,
+    "subjectId" : 228,
+    "name" : "[1] Protocolos ",
+    "description" : "(ARP, IP, ICMP, UDP, TCP, DHCP, SMTP, IMAP, POP3, HTTP, FTP, SMB, DNS e BGP)",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788606",
+    "updatedAt" : null
+  }, {
+    "id" : 4039,
+    "subjectId" : 228,
+    "name" : "[1] OWASP",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788664",
+    "updatedAt" : null
+  }, {
+    "id" : 4040,
+    "subjectId" : 228,
+    "name" : "[1] Malwares",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788726",
+    "updatedAt" : null
+  }, {
+    "id" : 4041,
+    "subjectId" : 228,
+    "name" : "[1] Firewalls",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788775",
+    "updatedAt" : null
+  }, {
+    "id" : 4042,
+    "subjectId" : 228,
+    "name" : "[1] TLS, SSL, IPSec, DNSSEC,",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788871",
+    "updatedAt" : null
+  }, {
+    "id" : 4043,
+    "subjectId" : 228,
+    "name" : "[1] SIEM, SOAR, IAM",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788923",
+    "updatedAt" : null
+  }, {
+    "id" : 4044,
+    "subjectId" : 228,
+    "name" : "[1] SSO, SAML, OAuth, JWT",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.788976",
+    "updatedAt" : null
+  }, {
+    "id" : 4045,
+    "subjectId" : 228,
+    "name" : "[1] LDAP",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789024",
+    "updatedAt" : null
+  }, {
+    "id" : 4046,
+    "subjectId" : 228,
+    "name" : "[1] RBAC, ABAC",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789079",
+    "updatedAt" : null
+  }, {
+    "id" : 4047,
+    "subjectId" : 228,
+    "name" : "[1] CIS Controles e MITRE ATT&CK",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789136",
+    "updatedAt" : null
+  }, {
+    "id" : 4048,
+    "subjectId" : 228,
+    "name" : "[1] VPN",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789189",
+    "updatedAt" : null
+  }, {
+    "id" : 4049,
+    "subjectId" : 228,
+    "name" : "[2] RAID",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789248",
+    "updatedAt" : null
+  }, {
+    "id" : 4050,
+    "subjectId" : 228,
+    "name" : "[2] DMZ",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789296",
+    "updatedAt" : null
+  }, {
+    "id" : 4051,
+    "subjectId" : 228,
+    "name" : "[2] PKI",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789351",
+    "updatedAt" : null
+  }, {
+    "id" : 4052,
+    "subjectId" : 228,
+    "name" : "[2] Certificados",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789409",
+    "updatedAt" : null
+  }, {
+    "id" : 4053,
+    "subjectId" : 228,
+    "name" : "[2] IBM WebSphere",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789462",
+    "updatedAt" : null
+  }, {
+    "id" : 4054,
+    "subjectId" : 228,
+    "name" : "[2] Istio",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789511",
+    "updatedAt" : null
+  }, {
+    "id" : 4055,
+    "subjectId" : 228,
+    "name" : "[2] ArgoCD - CD para Kubernetes",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789564",
+    "updatedAt" : null
+  }, {
+    "id" : 4056,
+    "subjectId" : 228,
+    "name" : "[2] OpenShift",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789615",
+    "updatedAt" : null
+  }, {
+    "id" : 4057,
+    "subjectId" : 228,
+    "name" : "[2] Helm",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789662",
+    "updatedAt" : null
+  }, {
+    "id" : 4058,
+    "subjectId" : 228,
+    "name" : "[2] Kubernetes",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789716",
+    "updatedAt" : null
+  }, {
+    "id" : 4059,
+    "subjectId" : 228,
+    "name" : "[3] Docker",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789772",
+    "updatedAt" : null
+  }, {
+    "id" : 4060,
+    "subjectId" : 228,
+    "name" : "[3] Azure",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789828",
+    "updatedAt" : null
+  }, {
+    "id" : 4061,
+    "subjectId" : 228,
+    "name" : "[3] AWS",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789889",
+    "updatedAt" : null
+  }, {
+    "id" : 4062,
+    "subjectId" : 228,
+    "name" : "[3] Linux",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789945",
+    "updatedAt" : null
+  }, {
+    "id" : 4063,
+    "subjectId" : 228,
+    "name" : "[3] Virtualizacao",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.789998",
+    "updatedAt" : null
+  }, {
+    "id" : 4064,
+    "subjectId" : 228,
+    "name" : "[3] Modelo OSI",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79005",
+    "updatedAt" : null
+  }, {
+    "id" : 4065,
+    "subjectId" : 228,
+    "name" : "[3] WebSocket",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790102",
+    "updatedAt" : null
+  }, {
+    "id" : 4066,
+    "subjectId" : 228,
+    "name" : "[3] Redes LAN, SDN e WAN",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790156",
+    "updatedAt" : null
+  }, {
+    "id" : 4067,
+    "subjectId" : 228,
+    "name" : "[3] Docker Swarm",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790209",
+    "updatedAt" : null
+  }, {
+    "id" : 4068,
+    "subjectId" : 228,
+    "name" : "[3] gRPC",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790262",
+    "updatedAt" : null
+  }, {
+    "id" : 4069,
+    "subjectId" : 228,
+    "name" : "[4] SOAP",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79031",
+    "updatedAt" : null
+  }, {
+    "id" : 4070,
+    "subjectId" : 228,
+    "name" : "[4] DHCP",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790365",
+    "updatedAt" : null
+  }, {
+    "id" : 4071,
+    "subjectId" : 228,
+    "name" : "[4] ELK - Elastic, LogStash e Kibana",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790419",
+    "updatedAt" : null
+  }, {
+    "id" : 4072,
+    "subjectId" : 228,
+    "name" : "[4] Datadog",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790467",
+    "updatedAt" : null
+  }, {
+    "id" : 4073,
+    "subjectId" : 228,
+    "name" : "[4] Prometheus",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79057",
+    "updatedAt" : null
+  }, {
+    "id" : 4074,
+    "subjectId" : 228,
+    "name" : "[4] Puppet e Ansible",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79067",
+    "updatedAt" : null
+  }, {
+    "id" : 4075,
+    "subjectId" : 229,
+    "name" : "[1] .NET e C#",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790732",
+    "updatedAt" : null
+  }, {
+    "id" : 4076,
+    "subjectId" : 229,
+    "name" : "[1] Java",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790788",
+    "updatedAt" : null
+  }, {
+    "id" : 4077,
+    "subjectId" : 229,
+    "name" : "[1] Python",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790837",
+    "updatedAt" : null
+  }, {
+    "id" : 4078,
+    "subjectId" : 229,
+    "name" : "[1] Spring",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790911",
+    "updatedAt" : null
+  }, {
+    "id" : 4079,
+    "subjectId" : 229,
+    "name" : "[1] Hibernate",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.790964",
+    "updatedAt" : null
+  }, {
+    "id" : 4080,
+    "subjectId" : 229,
+    "name" : "[2] Kafka",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79102",
+    "updatedAt" : null
+  }, {
+    "id" : 4081,
+    "subjectId" : 229,
+    "name" : "[2] Kotlin",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79107",
+    "updatedAt" : null
+  }, {
+    "id" : 4082,
+    "subjectId" : 229,
+    "name" : "[2] Swift",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791122",
+    "updatedAt" : null
+  }, {
+    "id" : 4083,
+    "subjectId" : 229,
+    "name" : "[2] Redis",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791173",
+    "updatedAt" : null
+  }, {
+    "id" : 4084,
+    "subjectId" : 229,
+    "name" : "[2] Swing, JavaFX e Server Faces",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791229",
+    "updatedAt" : null
+  }, {
+    "id" : 4085,
+    "subjectId" : 229,
+    "name" : "[3] Lombok",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791291",
+    "updatedAt" : null
+  }, {
+    "id" : 4086,
+    "subjectId" : 229,
+    "name" : "[3] Libs Java (Mockito, JUnit, Lombok, etc)",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791343",
+    "updatedAt" : null
+  }, {
+    "id" : 4087,
+    "subjectId" : 229,
+    "name" : "[3] The Twelve Factors",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791398",
+    "updatedAt" : null
+  }, {
+    "id" : 4088,
+    "subjectId" : 229,
+    "name" : "[3] Apache Struts",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791446",
+    "updatedAt" : null
+  }, {
+    "id" : 4089,
+    "subjectId" : 229,
+    "name" : "[3] Terraform",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791499",
+    "updatedAt" : null
+  }, {
+    "id" : 4090,
+    "subjectId" : 229,
+    "name" : "[4] Componentes CPU e PC",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791555",
+    "updatedAt" : null
+  }, {
+    "id" : 4091,
+    "subjectId" : 229,
+    "name" : "[4] Estados, Processos e Threads",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791608",
+    "updatedAt" : null
+  }, {
+    "id" : 4092,
+    "subjectId" : 229,
+    "name" : "[4] I/O e CPU Bounds e Deadlocks",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791657",
+    "updatedAt" : null
+  }, {
+    "id" : 4093,
+    "subjectId" : 229,
+    "name" : "[4] Estruturas de Dados e Complexidades",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791709",
+    "updatedAt" : null
+  }, {
+    "id" : 4094,
+    "subjectId" : 229,
+    "name" : "[4] Árvores Balanceadas e Mét Ordenação",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791762",
+    "updatedAt" : null
+  }, {
+    "id" : 4095,
+    "subjectId" : 229,
+    "name" : "[Extra] Teoria dos Grafos e Buscas",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791815",
+    "updatedAt" : null
+  }, {
+    "id" : 4096,
+    "subjectId" : 229,
+    "name" : "[Extra] Estruturas de Controles e Exceções",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791863",
+    "updatedAt" : null
+  }, {
+    "id" : 4097,
+    "subjectId" : 229,
+    "name" : "[Extra] Programação Async",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.791914",
+    "updatedAt" : null
+  }, {
+    "id" : 4098,
+    "subjectId" : 229,
+    "name" : "[Extra] POO",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79197",
+    "updatedAt" : null
+  }, {
+    "id" : 4099,
+    "subjectId" : 229,
+    "name" : "[Extra] Design Patterns GOF e GRASP",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792021",
+    "updatedAt" : null
+  }, {
+    "id" : 4100,
+    "subjectId" : 229,
+    "name" : "[Extra] Padroes Arquiteturais",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792069",
+    "updatedAt" : null
+  }, {
+    "id" : 4101,
+    "subjectId" : 229,
+    "name" : "[Extra] JavaScript",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792125",
+    "updatedAt" : null
+  }, {
+    "id" : 4102,
+    "subjectId" : 229,
+    "name" : "[Extra] DevOps e Int. Cont, Del. Cont, Depl. Cont",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792177",
+    "updatedAt" : null
+  }, {
+    "id" : 4103,
+    "subjectId" : 229,
+    "name" : "[Extra] Testes de Software",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792225",
+    "updatedAt" : null
+  }, {
+    "id" : 4104,
+    "subjectId" : 229,
+    "name" : "[Extra] Ágeis: Scrum, Kanban e ITIL V4 4.6.1 e PMBOK",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792281",
+    "updatedAt" : null
+  }, {
+    "id" : 4105,
+    "subjectId" : 229,
+    "name" : "[Extra] COBIT",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792335",
+    "updatedAt" : null
+  }, {
+    "id" : 4106,
+    "subjectId" : 229,
+    "name" : "[Extra] GIT e GitHub",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792415",
+    "updatedAt" : null
+  }, {
+    "id" : 4107,
+    "subjectId" : 229,
+    "name" : "[Extra] Jenkins",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792469",
+    "updatedAt" : null
+  }, {
+    "id" : 4108,
+    "subjectId" : 229,
+    "name" : "[Extra] SonarQube",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79252",
+    "updatedAt" : null
+  }, {
+    "id" : 4109,
+    "subjectId" : 230,
+    "name" : "[1] Modelos Supervisionados",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79258",
+    "updatedAt" : null
+  }, {
+    "id" : 4110,
+    "subjectId" : 230,
+    "name" : "[1] Modelos Nao Supervisionados",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792631",
+    "updatedAt" : null
+  }, {
+    "id" : 4111,
+    "subjectId" : 230,
+    "name" : "[1] Tipos de Regressões",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792685",
+    "updatedAt" : null
+  }, {
+    "id" : 4112,
+    "subjectId" : 230,
+    "name" : "[1] Algoritmos de todos os modelos",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792733",
+    "updatedAt" : null
+  }, {
+    "id" : 4113,
+    "subjectId" : 230,
+    "name" : "[1] Deep Learning",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792784",
+    "updatedAt" : null
+  }, {
+    "id" : 4114,
+    "subjectId" : 230,
+    "name" : "[1] Redes Neurais",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79284",
+    "updatedAt" : null
+  }, {
+    "id" : 4115,
+    "subjectId" : 230,
+    "name" : "[2] Keras, Tensor Flow",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792892",
+    "updatedAt" : null
+  }, {
+    "id" : 4116,
+    "subjectId" : 230,
+    "name" : "[2] Modelos Semi Supervisionados",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792939",
+    "updatedAt" : null
+  }, {
+    "id" : 4117,
+    "subjectId" : 230,
+    "name" : "[2] Modelos Por Reforço",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.792997",
+    "updatedAt" : null
+  }, {
+    "id" : 4118,
+    "subjectId" : 230,
+    "name" : "[2] LLM",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793048",
+    "updatedAt" : null
+  }, {
+    "id" : 4119,
+    "subjectId" : 230,
+    "name" : "[2] MCP",
+    "description" : "",
+    "weekDays" : "",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793103",
+    "updatedAt" : null
+  }, {
+    "id" : 4120,
+    "subjectId" : 230,
+    "name" : "[2] LangChain e LangGraph",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793151",
+    "updatedAt" : null
+  }, {
+    "id" : 4121,
+    "subjectId" : 230,
+    "name" : "[3] PLN",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793202",
+    "updatedAt" : null
+  }, {
+    "id" : 4122,
+    "subjectId" : 230,
+    "name" : "[3] Clustering",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793255",
+    "updatedAt" : null
+  }, {
+    "id" : 4123,
+    "subjectId" : 230,
+    "name" : "[3] Modelos por Transferência",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793302",
+    "updatedAt" : null
+  }, {
+    "id" : 4124,
+    "subjectId" : 230,
+    "name" : "[3] MLOps",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793355",
+    "updatedAt" : null
+  }, {
+    "id" : 4125,
+    "subjectId" : 230,
+    "name" : "[3] Redução de Dimensionalidade",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793409",
+    "updatedAt" : null
+  }, {
+    "id" : 4126,
+    "subjectId" : 230,
+    "name" : "[3] Pandas",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793462",
+    "updatedAt" : null
+  }, {
+    "id" : 4127,
+    "subjectId" : 230,
+    "name" : "[4] Scikit Learn",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793509",
+    "updatedAt" : null
+  }, {
+    "id" : 4128,
+    "subjectId" : 230,
+    "name" : "[4] Numpy",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793561",
+    "updatedAt" : null
+  }, {
+    "id" : 4129,
+    "subjectId" : 230,
+    "name" : "[4] Matplotlib e Seaborn",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793614",
+    "updatedAt" : null
+  }, {
+    "id" : 4130,
+    "subjectId" : 230,
+    "name" : "[4] Apache Airflow",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793672",
+    "updatedAt" : null
+  }, {
+    "id" : 4131,
+    "subjectId" : 230,
+    "name" : "[4] NLTK",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79372",
+    "updatedAt" : null
+  }, {
+    "id" : 4132,
+    "subjectId" : 230,
+    "name" : "[4] Databricks",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793775",
+    "updatedAt" : null
+  }, {
+    "id" : 4133,
+    "subjectId" : 231,
+    "name" : "[1] Django",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79384",
+    "updatedAt" : null
+  }, {
+    "id" : 4134,
+    "subjectId" : 231,
+    "name" : "[1] Angular",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.793893",
+    "updatedAt" : null
+  }, {
+    "id" : 4135,
+    "subjectId" : 231,
+    "name" : "[1] React e TypeScript",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79394",
+    "updatedAt" : null
+  }, {
+    "id" : 4136,
+    "subjectId" : 231,
+    "name" : "[2] ElectronJS",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794012",
+    "updatedAt" : null
+  }, {
+    "id" : 4137,
+    "subjectId" : 231,
+    "name" : "[2] Flutter",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794065",
+    "updatedAt" : null
+  }, {
+    "id" : 4138,
+    "subjectId" : 231,
+    "name" : "[2] NextJS e NuxtJS",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794152",
+    "updatedAt" : null
+  }, {
+    "id" : 4139,
+    "subjectId" : 231,
+    "name" : "[3] VueJS",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794207",
+    "updatedAt" : null
+  }, {
+    "id" : 4140,
+    "subjectId" : 231,
+    "name" : "[3] React Native",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794255",
+    "updatedAt" : null
+  }, {
+    "id" : 4141,
+    "subjectId" : 229,
+    "name" : "[3] GoLang",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794307",
+    "updatedAt" : null
+  }, {
+    "id" : 4142,
+    "subjectId" : 231,
+    "name" : "[3] Kotlin Nativo (Android)",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794358",
+    "updatedAt" : null
+  }, {
+    "id" : 4143,
+    "subjectId" : 231,
+    "name" : "[4] Swift Nativo (iOS)",
+    "description" : "",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794414",
+    "updatedAt" : null
+  }, {
+    "id" : 4144,
+    "subjectId" : 232,
+    "name" : "[1] Cucumber",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794463",
+    "updatedAt" : null
+  }, {
+    "id" : 4145,
+    "subjectId" : 232,
+    "name" : "[1] JUnit",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794516",
+    "updatedAt" : null
+  }, {
+    "id" : 4146,
+    "subjectId" : 232,
+    "name" : "[1] JMeter",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794568",
+    "updatedAt" : null
+  }, {
+    "id" : 4147,
+    "subjectId" : 232,
+    "name" : "[2] Selenium",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794618",
+    "updatedAt" : null
+  }, {
+    "id" : 4148,
+    "subjectId" : 232,
+    "name" : "[2] Mockito",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794667",
+    "updatedAt" : null
+  }, {
+    "id" : 4149,
+    "subjectId" : 232,
+    "name" : "[2] AssertJS",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794718",
+    "updatedAt" : null
+  }, {
+    "id" : 4150,
+    "subjectId" : 232,
+    "name" : "[3] Automação de Testes",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794774",
+    "updatedAt" : null
+  }, {
+    "id" : 4151,
+    "subjectId" : 232,
+    "name" : "[3] Pytest",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794825",
+    "updatedAt" : null
+  }, {
+    "id" : 4152,
+    "subjectId" : 232,
+    "name" : "[3] Jest",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794873",
+    "updatedAt" : null
+  }, {
+    "id" : 4153,
+    "subjectId" : 232,
+    "name" : "[4] Jasmine",
+    "description" : "",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794927",
+    "updatedAt" : null
+  }, {
+    "id" : 4154,
+    "subjectId" : 233,
+    "name" : "[1] COBOL",
+    "description" : "",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.794977",
+    "updatedAt" : null
+  }, {
+    "id" : 4155,
+    "subjectId" : 233,
+    "name" : "[2] JCL",
+    "description" : "",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795025",
+    "updatedAt" : null
+  }, {
+    "id" : 4156,
+    "subjectId" : 233,
+    "name" : "[3] TSO",
+    "description" : "",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79508",
+    "updatedAt" : null
+  }, {
+    "id" : 4157,
+    "subjectId" : 233,
+    "name" : "[4] ISPF",
+    "description" : "",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795137",
+    "updatedAt" : null
+  }, {
+    "id" : 4158,
+    "subjectId" : 233,
+    "name" : "[Extra] DB2",
+    "description" : "",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795189",
+    "updatedAt" : null
+  }, {
+    "id" : 4159,
+    "subjectId" : 230,
+    "name" : "[Extra] LlamaIndex",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795241",
+    "updatedAt" : null
+  }, {
+    "id" : 4160,
+    "subjectId" : 230,
+    "name" : "[Extra] Strands",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795296",
+    "updatedAt" : null
+  }, {
+    "id" : 4161,
+    "subjectId" : 229,
+    "name" : "[Extra] CQRS e Axon",
+    "description" : "",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795351",
+    "updatedAt" : null
+  }, {
+    "id" : 4162,
+    "subjectId" : 227,
+    "name" : "[Extra] Power BI e Análise de dados",
+    "description" : "",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795402",
+    "updatedAt" : null
+  }, {
+    "id" : 4163,
+    "subjectId" : 235,
+    "name" : "FUNDAMENTOS ABSOLUTOS",
+    "description" : " Alfabeto e pronúncia das letras\n Sons do inglês\n Vogais e consoantes\n Pronúncia básica\n Cumprimentos e despedidas\n Apresentação pessoal\n Números\n Dias da semana\n Meses do ano\n Datas\n Horas\n Cores\n Países e nacionalidades\n Profissões\n Família\n Objetos do cotidiano\n Lugares\n Verbos básicos\n Pronomes pessoais\n Possessivos\n Artigos: a / an / the\n Plural\n There is / There are\n This / That / These / Those\n Some / Any\n Much / Many\n Preposições básicas\n Adjetivos básicos",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795451",
+    "updatedAt" : null
+  }, {
+    "id" : 4164,
+    "subjectId" : 235,
+    "name" : "GRAMÁTICA ESSENCIAL",
+    "description" : "Verb to be\n Am / Is / Are\n Forma afirmativa\n Forma negativa\n Perguntas\n Respostas curtas\n Contrações\nPresent Simple\n Estrutura\n Do / Does\n Don't / Doesn't\n Terceira pessoa — S\n Advérbios de frequência\n Rotinas e hábitos\nPresent Continuous\n Am / Is / Are + ING\n Ações acontecendo agora\n Diferença Present Simple × Continuous\nPast Simple\n Verbos regulares\n Verbos irregulares\n Did\n Didn't\n Perguntas no passado\n Negação no passado\nFuturo\n Will\n Going to\n Present Continuous para futuro\n Diferença Will × Going to\nModal verbs\n Can\n Could\n Should\n Must\n May\n Might\n Would",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795505",
+    "updatedAt" : null
+  }, {
+    "id" : 4165,
+    "subjectId" : 235,
+    "name" : "VOCABULÁRIO",
+    "description" : " Casa\n Trabalho\n Tecnologia\n Computadores\n Programação\n Negócios\n Dinheiro\n Banco\n Viagem\n Aeroporto\n Hotel\n Restaurante\n Comida\n Academia\n Esportes\n Futebol\n Saúde\n Corpo humano\n Roupas\n Compras\n Transporte\n Cidade\n Natureza\n Clima\n Entretenimento\n Filmes e séries\n Música\n Relacionamentos\n Sentimentos\n Notícias\n Política\n Ciência\n Inteligência Artificial\n Cultura\n Educação\n⭐ Vocabulário de alta frequência\n 100 palavras mais comuns\n 500 palavras mais comuns\n 1.000 palavras\n 2.000 palavras\n 3.000 palavras\n 5.000+ palavras\n",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795557",
+    "updatedAt" : null
+  }, {
+    "id" : 4166,
+    "subjectId" : 235,
+    "name" : "CONSTRUÇÃO DE FRASES",
+    "description" : "Ordem das palavras\n Sujeito + verbo + objeto\n Perguntas\n Negação\n Respostas curtas\n Frases afirmativas\n Frases negativas\n Frases interrogativas\n Conectores\n And\n But\n Because\n So\n Although\n However\n Therefore\n If\n When\n While\n Before / After\n Relative clauses\n Comparações\n Superlativos",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795615",
+    "updatedAt" : null
+  }, {
+    "id" : 4167,
+    "subjectId" : 235,
+    "name" : "TEMPOS VERBAIS COMPLETOS",
+    "description" : "Present Simple\n Present Continuous\n Past Simple\n Past Continuous\n Present Perfect\n Present Perfect Continuous\n Past Perfect\n Past Perfect Continuous\n Future Simple\n Future Continuous\n Future Perfect\n Future Perfect Continuous\nDominar:\n Quando usar cada tempo\n Diferenças entre tempos\n Formação de perguntas\n Formação de negativas\n Indicadores de tempo\n Uso em conversação",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795663",
+    "updatedAt" : null
+  }, {
+    "id" : 4168,
+    "subjectId" : 235,
+    "name" : "PHRASAL VERBS",
+    "description" : "Get up\n Get on / Get off\n Get along\n Get over\n Give up\n Give back\n Go on\n Go through\n Look for\n Look after\n Look up\n Look forward to\n Find out\n Figure out\n Pick up\n Put off\n Take off\n Take over\n Turn on / Turn off\n Turn out\n Bring up\n Break down\n Break up\n Call off\n Carry on\n Come up with\n Run out of",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795717",
+    "updatedAt" : null
+  }, {
+    "id" : 4169,
+    "subjectId" : 235,
+    "name" : "LISTENING",
+    "description" : "Inglês lento\n Inglês normal\n Diferentes sotaques\n Contrações\n Connected speech\n Reduções de palavras\n Gírias\n Inglês americano\n Inglês britânico\n Inglês australiano\n Inglês corporativo\n Inglês informal\nTreino progressivo\n Áudios com legenda em inglês\n Áudios sem legenda\n Podcasts\n YouTube\n Séries\n Filmes\n Notícias\n Conversas reais\n Shadowing",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795775",
+    "updatedAt" : null
+  }, {
+    "id" : 4170,
+    "subjectId" : 235,
+    "name" : "SPEAKING",
+    "description" : "Conversação básica\n Me apresentar\n Falar sobre minha família\n Falar sobre meu trabalho\n Falar sobre minha rotina\n Falar sobre hobbies\n Fazer perguntas\n Responder perguntas\n Pedir informações\n Fazer pedidos\n Explicar problemas\nConversação intermediária\n Contar histórias\n Explicar experiências\n Dar opiniões\n Concordar\n Discordar\n Argumentar\n Explicar conceitos\n Fazer apresentações\n Participar de reuniões\n Fazer networking\nAvançado\n Debate\n Ironia\n Humor\n Sarcasmo\n Nuances\n Metáforas\n Expressões idiomáticas\n Small talk\n Storytelling\n Persuasão",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795854",
+    "updatedAt" : null
+  }, {
+    "id" : 4171,
+    "subjectId" : 235,
+    "name" : "PRONÚNCIA",
+    "description" : " Sons do TH\n R americano\n L\n V × W\n T × D\n ED dos verbos\n S × Z\n Vogais curtas\n Vogais longas\n Word stress\n Sentence stress\n Intonation\n Connected speech\n Linking\n Reductions\n Ritmo do inglês",
+    "weekDays" : "0,1,2,3,4,5,6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795908",
+    "updatedAt" : null
+  }, {
+    "id" : 4172,
+    "subjectId" : 235,
+    "name" : "GRAMÁTICA INTERMEDIÁRIA/AVANÇADA",
+    "description" : "Conditionals\n Zero Conditional\n First Conditional\n Second Conditional\n Third Conditional\n Mixed Conditionals\n Passive Voice\n Reported Speech\n Relative Clauses\n Defining / Non-defining clauses\n Gerunds\n Infinitives\n Participles\n Modal perfect\n Question tags\n Inversion\n Subjunctive\n Causative\n Advanced prepositions\n Advanced conjunctions",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.795956",
+    "updatedAt" : null
+  }, {
+    "id" : 4173,
+    "subjectId" : 235,
+    "name" : "INGLÊS REAL",
+    "description" : "Idioms\n Slang\n Informal English\n Formal English\n Business English\n Academic English\n Technical English\n Internet English\n Abbreviations\n Expressions\n Collocations\n False cognates\n Cultural references\n Humor\n Sarcasm\n Regional expressions",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796009",
+    "updatedAt" : null
+  }, {
+    "id" : 4174,
+    "subjectId" : 235,
+    "name" : "INGLÊS PROFISSIONAL",
+    "description" : "Job interview\n Resume / CV\n LinkedIn\n Technical interview\n Meetings\n Daily meetings\n Presentations\n Negotiations\n Emails\n Documentation\n Architecture discussions\n Code review\n Incident management\n Project management\n Leadership\n Giving feedback\n Receiving feedback\n Explaining technical problems\n Explaining architecture\n Defending technical decisions",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796061",
+    "updatedAt" : null
+  }, {
+    "id" : 4175,
+    "subjectId" : 235,
+    "name" : "LEITURA",
+    "description" : " Textos simples\n Notícias\n Blogs\n Reddit\n Documentação técnica\n Artigos científicos\n Livros\n Literatura\n Documentação de software\n Artigos técnicos sem tradução\n",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79611",
+    "updatedAt" : null
+  }, {
+    "id" : 4176,
+    "subjectId" : 235,
+    "name" : "ESCRITA",
+    "description" : " Frases simples\n Parágrafos\n Mensagens\n Emails\n Comentários\n Relatórios\n Documentação\n Artigos\n LinkedIn\n Argumentação\n Storytelling\n Escrita formal\n Escrita informal\n Revisão gramatical\n Naturalidade",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796162",
+    "updatedAt" : null
+  }, {
+    "id" : 4177,
+    "subjectId" : 234,
+    "name" : "AWS AI Practioner",
+    "description" : "",
+    "weekDays" : "0,1,2,3,4,5,6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796214",
+    "updatedAt" : null
+  }, {
+    "id" : 4178,
+    "subjectId" : 228,
+    "name" : "[4] Mensageria",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796268",
+    "updatedAt" : null
+  }, {
+    "id" : 4179,
+    "subjectId" : 228,
+    "name" : "[4] Terraform",
+    "description" : "",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796317",
+    "updatedAt" : null
+  }, {
+    "id" : 4180,
+    "subjectId" : 236,
+    "name" : "NÍVEL 0 — Fundamentos",
+    "description" : "Big O, Big Ω, Big Θ (Melhor, pior e caso médio)\nAmortized analysis & Trade-offs tempo vs memória\nDomínio automático de: O(1), O(log n), O(n), O(n log n), O(n²), O(2ⁿ), O(n!)",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796369",
+    "updatedAt" : null
+  }, {
+    "id" : 4181,
+    "subjectId" : 236,
+    "name" : "NÍVEL 1 — Arrays e Strings",
+    "description" : "Padrões: Traversal, Two Pointers, Sliding Window, Prefix Sum, Kadane\nClássicos: Two Sum, Three Sum, Maximum Subarray, Product Except Self, Merge Intervals",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79643",
+    "updatedAt" : null
+  }, {
+    "id" : 4182,
+    "subjectId" : 236,
+    "name" : "NÍVEL 2 — Hashing",
+    "description" : "HashMap / HashSet, Lookup O(1), Deduplicação e Agrupamento\nClássicos: Group Anagrams, Longest Consecutive Sequence, Subarray Sum Equals K",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796485",
+    "updatedAt" : null
+  }, {
+    "id" : 4183,
+    "subjectId" : 236,
+    "name" : "NÍVEL 3 — Sliding Window",
+    "description" : "Fixed Window vs Variable Window (Expand / Shrink / Invariant)\nClássicos: Longest Substring Without Repeating, Minimum Window Substring",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796535",
+    "updatedAt" : null
+  }, {
+    "id" : 4184,
+    "subjectId" : 236,
+    "name" : "NÍVEL 4 — Two Pointers",
+    "description" : "Opostos (Left / Right) e Slow / Fast Pointers\nClássicos: Valid Palindrome, Container With Most Water, Linked List Cycle",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796592",
+    "updatedAt" : null
+  }, {
+    "id" : 4185,
+    "subjectId" : 236,
+    "name" : "NÍVEL 5 — Prefix Sum",
+    "description" : "Cumulative sum, Range sum em O(1), Prefix XOR, 2D Prefix Sum",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796644",
+    "updatedAt" : null
+  }, {
+    "id" : 4186,
+    "subjectId" : 236,
+    "name" : "NÍVEL 6 — Sorting",
+    "description" : "Merge Sort, Quick Sort, Heap Sort, Counting/Radix Sort\nCompreender complexidade, estabilidade e trade-offs",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796696",
+    "updatedAt" : null
+  }, {
+    "id" : 4187,
+    "subjectId" : 236,
+    "name" : "NÍVEL 7 — Binary Search",
+    "description" : "Variantes: Lower/Upper Bound, Rotated Array, Peak Element\nBinary Search on Answer (Transformar otimização em busca binária)",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796746",
+    "updatedAt" : null
+  }, {
+    "id" : 4188,
+    "subjectId" : 236,
+    "name" : "NÍVEL 8 — Linked Lists",
+    "description" : "Técnicas: Fast/Slow pointers, Dummy node, In-place reversal\nClássicos: Reverse Linked List, Merge Two Sorted Lists, Reorder List",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.7968",
+    "updatedAt" : null
+  }, {
+    "id" : 4189,
+    "subjectId" : 236,
+    "name" : "NÍVEL 9 — Stack",
+    "description" : "Monotonic Stack (Extremamente importante)\nClássicos: Valid Parentheses, Daily Temperatures, Largest Rectangle in Histogram",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796852",
+    "updatedAt" : null
+  }, {
+    "id" : 4190,
+    "subjectId" : 236,
+    "name" : "NÍVEL 10 — Queue / Deque",
+    "description" : "BFS, Circular Queue, Monotonic Deque\nClássico: Sliding Window Maximum",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796905",
+    "updatedAt" : null
+  }, {
+    "id" : 4191,
+    "subjectId" : 236,
+    "name" : "NÍVEL 11 — Heap / Priority Queue",
+    "description" : "Min/Max Heap, Heapify, Two Heaps pattern\nClássicos: Kth Largest Element, Top K Frequent, Find Median from Data Stream",
+    "weekDays" : "0",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.796954",
+    "updatedAt" : null
+  }, {
+    "id" : 4192,
+    "subjectId" : 236,
+    "name" : "NÍVEL 12 — Intervals",
+    "description" : "Merge intervals, Overlapping, Sweep line\nClássicos: Insert Interval, Non-overlapping Intervals, Meeting Rooms II",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797007",
+    "updatedAt" : null
+  }, {
+    "id" : 4193,
+    "subjectId" : 236,
+    "name" : "NÍVEL 13 & 14 — Trees & BST",
+    "description" : "Traversals (Preorder, Inorder, Postorder, Level Order), DFS, BFS\nBST Properties (Inorder traversal gera elementos ordenados)\nClássicos: Diameter of Binary Tree, Lowest Common Ancestor, Maximum Path Sum",
+    "weekDays" : "1",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797059",
+    "updatedAt" : null
+  }, {
+    "id" : 4194,
+    "subjectId" : 236,
+    "name" : "NÍVEL 15 & 16 — Graphs & Graph Algorithms",
+    "description" : "Representação (Adjacency List/Matrix), DFS, BFS em grafos\nShortest Path (Dijkstra, Bellman-Ford), MST (Kruskal, Prim)\nUnion Find (DSU), Topological Sort (Kahn's), Cycle Detection",
+    "weekDays" : "2",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797115",
+    "updatedAt" : null
+  }, {
+    "id" : 4195,
+    "subjectId" : 236,
+    "name" : "NÍVEL 17 & 18 — Recursion & Backtracking",
+    "description" : "Base case, Call stack, State, Tree recursion\nPadrão Backtracking: Choose -> Explore -> Unchoose\nClássicos: Subsets, Permutations, N-Queens, Word Search",
+    "weekDays" : "3",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797165",
+    "updatedAt" : null
+  }, {
+    "id" : 4196,
+    "subjectId" : 236,
+    "name" : "NÍVEL 19 — Dynamic Programming",
+    "description" : "Identificar: State, Transition, Base Case, Answer\n1D & 2D DP, Knapsack (0/1 e Unbounded), LIS / LCS, String DP",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797219",
+    "updatedAt" : null
+  }, {
+    "id" : 4197,
+    "subjectId" : 236,
+    "name" : "NÍVEL 20 — Greedy",
+    "description" : "Interval scheduling, Jump problems, Gas station\nSaber provar formalmente que a escolha gulosa é válida",
+    "weekDays" : "5",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797271",
+    "updatedAt" : null
+  }, {
+    "id" : 4198,
+    "subjectId" : 236,
+    "name" : "NÍVEIS 21 a 28 — Tópicos Avançados & Expert",
+    "description" : "Trie (Prefix matching, Autocomplete)\nUnion Find avançado e Bit Manipulation (XOR tricks, Bitmask DP)\nMatemática para algoritmos (GCD, LCM, Sieve, Fast Exponentiation)\nFenwick Tree / BIT, Segment Tree, Sparse Table\nAdvanced Strings (KMP, Rabin-Karp, Z Algorithm)",
+    "weekDays" : "6",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797319",
+    "updatedAt" : null
+  }, {
+    "id" : 4199,
+    "subjectId" : 230,
+    "name" : "[Extra] MLFlow",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797373",
+    "updatedAt" : null
+  }, {
+    "id" : 4200,
+    "subjectId" : 230,
+    "name" : "[Extra] RAGs",
+    "description" : "",
+    "weekDays" : "4",
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797425",
+    "updatedAt" : null
+  } ],
+  "topicItems" : [ {
+    "id" : 1056,
+    "topicId" : 4059,
+    "name" : "Conteineres",
+    "description" : "",
+    "lastStudiedAt" : "2026-05-18T14:24:01.433424",
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797514",
+    "updatedAt" : null
+  }, {
+    "id" : 1057,
+    "topicId" : 4073,
+    "name" : "Arquitetura do Prometheus",
+    "description" : "",
+    "lastStudiedAt" : "2026-05-18T15:57:35.1702",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2390,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797645",
+    "updatedAt" : null
+  }, {
+    "id" : 1058,
+    "topicId" : 4054,
+    "name" : "Configuracoes",
+    "description" : "",
+    "lastStudiedAt" : "2026-05-18T16:51:32.909808",
+    "studyCount" : 1,
+    "totalStudySeconds" : 3177,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797701",
+    "updatedAt" : null
+  }, {
+    "id" : 1059,
+    "topicId" : 4076,
+    "name" : "Streams e Threads",
+    "description" : "",
+    "lastStudiedAt" : "2026-06-02T15:06:23.875837",
+    "studyCount" : 2,
+    "totalStudySeconds" : 6602,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797762",
+    "updatedAt" : null
+  }, {
+    "id" : 1060,
+    "topicId" : 4081,
+    "name" : "Estrutura do código",
+    "description" : "",
+    "lastStudiedAt" : "2026-06-02T15:38:12.978684",
+    "studyCount" : 2,
+    "totalStudySeconds" : 6928,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797827",
+    "updatedAt" : null
+  }, {
+    "id" : 1061,
+    "topicId" : 4026,
+    "name" : "Modelagem de Dados",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-26T05:46:08.158836",
+    "studyCount" : 4,
+    "totalStudySeconds" : 14290,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797885",
+    "updatedAt" : null
+  }, {
+    "id" : 1062,
+    "topicId" : 4018,
+    "name" : "Modelagem Relacional",
+    "description" : "",
+    "lastStudiedAt" : "2026-05-20T16:54:02.626178",
+    "studyCount" : 1,
+    "totalStudySeconds" : 3560,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797939",
+    "updatedAt" : null
+  }, {
+    "id" : 1063,
+    "topicId" : 4044,
+    "name" : "Autorização com OAuth e JWT Token",
+    "description" : "",
+    "lastStudiedAt" : "2026-05-25T12:13:34.596522",
+    "studyCount" : 1,
+    "totalStudySeconds" : 4122,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.797997",
+    "updatedAt" : null
+  }, {
+    "id" : 1064,
+    "topicId" : 4081,
+    "name" : "Persistencia",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-25T07:09:10.531285",
+    "studyCount" : 2,
+    "totalStudySeconds" : 8743,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798056",
+    "updatedAt" : null
+  }, {
+    "id" : 1065,
+    "topicId" : 4034,
+    "name" : "Conceito",
+    "description" : "",
+    "lastStudiedAt" : "2026-05-27T16:20:50.632596",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2055,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798154",
+    "updatedAt" : null
+  }, {
+    "id" : 1066,
+    "topicId" : 4076,
+    "name" : "JDBC e JPA",
+    "description" : "",
+    "lastStudiedAt" : "2026-06-02T16:05:31.203836",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1396,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798214",
+    "updatedAt" : null
+  }, {
+    "id" : 1067,
+    "topicId" : 4075,
+    "name" : "Estrutura do código",
+    "description" : "",
+    "lastStudiedAt" : "2026-06-02T16:42:47.578481",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2101,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798268",
+    "updatedAt" : null
+  }, {
+    "id" : 1068,
+    "topicId" : 4162,
+    "name" : "Análise de dados",
+    "description" : "",
+    "lastStudiedAt" : "2026-06-03T13:50:26.946532",
+    "studyCount" : 1,
+    "totalStudySeconds" : 5559,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798331",
+    "updatedAt" : null
+  }, {
+    "id" : 1069,
+    "topicId" : 4143,
+    "name" : "Conceitos de front nativo",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-28T05:04:12.042117",
+    "studyCount" : 2,
+    "totalStudySeconds" : 9029,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798388",
+    "updatedAt" : null
+  }, {
+    "id" : 1070,
+    "topicId" : 4113,
+    "name" : "Construçao de Modelos Deep Learning",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-20T07:19:50.145158",
+    "studyCount" : 3,
+    "totalStudySeconds" : 21313,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798446",
+    "updatedAt" : null
+  }, {
+    "id" : 1071,
+    "topicId" : 4058,
+    "name" : "PODs e Services",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-03T05:14:58.897368",
+    "studyCount" : 3,
+    "totalStudySeconds" : 6915,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798502",
+    "updatedAt" : null
+  }, {
+    "id" : 1072,
+    "topicId" : 4072,
+    "name" : "Instrumentação Java",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-03T05:39:10.180878",
+    "studyCount" : 3,
+    "totalStudySeconds" : 6631,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798556",
+    "updatedAt" : null
+  }, {
+    "id" : 1073,
+    "topicId" : 4076,
+    "name" : "Programação orientada a objetos",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-25T05:53:51.25796",
+    "studyCount" : 6,
+    "totalStudySeconds" : 25476,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798614",
+    "updatedAt" : null
+  }, {
+    "id" : 1074,
+    "topicId" : 4078,
+    "name" : "Bibliotecas Spring",
+    "description" : "",
+    "lastStudiedAt" : "2026-07-14T18:32:38.984324",
+    "studyCount" : 1,
+    "totalStudySeconds" : 5061,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798672",
+    "updatedAt" : null
+  }, {
+    "id" : 1075,
+    "topicId" : 4042,
+    "name" : "mTLS",
+    "description" : "",
+    "lastStudiedAt" : "2026-07-20T06:25:49.304354",
+    "studyCount" : 1,
+    "totalStudySeconds" : 4038,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798729",
+    "updatedAt" : null
+  }, {
+    "id" : 1076,
+    "topicId" : 4032,
+    "name" : "Notebooks Python",
+    "description" : "",
+    "lastStudiedAt" : "2026-07-21T22:36:58.197039",
+    "studyCount" : 1,
+    "totalStudySeconds" : 3799,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798783",
+    "updatedAt" : null
+  }, {
+    "id" : 1077,
+    "topicId" : 4055,
+    "name" : "Deploy com ArgoCD",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-24T12:39:52.714398",
+    "studyCount" : 3,
+    "totalStudySeconds" : 6760,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798849",
+    "updatedAt" : null
+  }, {
+    "id" : 1078,
+    "topicId" : 4134,
+    "name" : "SPAs e Elementos",
+    "description" : "",
+    "lastStudiedAt" : "2026-07-31T05:45:48.638201",
+    "studyCount" : 1,
+    "totalStudySeconds" : 3600,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798908",
+    "updatedAt" : null
+  }, {
+    "id" : 1079,
+    "topicId" : 4023,
+    "name" : "Modelagem de dados",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-05T11:02:27.767978",
+    "studyCount" : 1,
+    "totalStudySeconds" : 4460,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.798964",
+    "updatedAt" : null
+  }, {
+    "id" : 1080,
+    "topicId" : 4030,
+    "name" : "Modelagem Relacional",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-05T11:38:11.74256",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2077,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799018",
+    "updatedAt" : null
+  }, {
+    "id" : 1081,
+    "topicId" : 4126,
+    "name" : "Manipulação de dados",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-06T04:46:03.359485",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2056,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799079",
+    "updatedAt" : null
+  }, {
+    "id" : 1082,
+    "topicId" : 4119,
+    "name" : "Estrutura",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-13T08:28:05.629353",
+    "studyCount" : 1,
+    "totalStudySeconds" : 4295,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799137",
+    "updatedAt" : null
+  }, {
+    "id" : 1083,
+    "topicId" : 4120,
+    "name" : "Orquestracao de Agentes",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799195",
+    "updatedAt" : null
+  }, {
+    "id" : 1084,
+    "topicId" : 4139,
+    "name" : "Componentes",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-14T05:19:50.677073",
+    "studyCount" : 1,
+    "totalStudySeconds" : 7161,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799254",
+    "updatedAt" : null
+  }, {
+    "id" : 1085,
+    "topicId" : 4177,
+    "name" : "Amazon Bedrock",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-24T18:19:58.637799",
+    "studyCount" : 2,
+    "totalStudySeconds" : 5806,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799311",
+    "updatedAt" : null
+  }, {
+    "id" : 1086,
+    "topicId" : 4177,
+    "name" : "Amazon Q",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799368",
+    "updatedAt" : null
+  }, {
+    "id" : 1087,
+    "topicId" : 4177,
+    "name" : "Amazon Sagemaker",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-29T05:54:21.840647",
+    "studyCount" : 1,
+    "totalStudySeconds" : 681,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799427",
+    "updatedAt" : "2026-08-29T05:54:21.841173"
+  }, {
+    "id" : 1088,
+    "topicId" : 4173,
+    "name" : "Listening Conversation - Real Life",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-14T07:01:58.693607",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1215,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.79948",
+    "updatedAt" : null
+  }, {
+    "id" : 1089,
+    "topicId" : 4174,
+    "name" : "Listening Conversation - Professional Life",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799537",
+    "updatedAt" : null
+  }, {
+    "id" : 1090,
+    "topicId" : 4177,
+    "name" : "ML Terms",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-15T16:27:47.685669",
+    "studyCount" : 1,
+    "totalStudySeconds" : 3389,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799594",
+    "updatedAt" : null
+  }, {
+    "id" : 1091,
+    "topicId" : 4175,
+    "name" : "Read Article",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-29T05:42:42.904324",
+    "studyCount" : 2,
+    "totalStudySeconds" : 5953,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799652",
+    "updatedAt" : "2026-08-29T05:42:42.90518"
+  }, {
+    "id" : 1092,
+    "topicId" : 4178,
+    "name" : "RabbitMQ",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-17T06:09:08.148655",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1242,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799706",
+    "updatedAt" : null
+  }, {
+    "id" : 1093,
+    "topicId" : 4178,
+    "name" : "Kafka",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799765",
+    "updatedAt" : null
+  }, {
+    "id" : 1094,
+    "topicId" : 4177,
+    "name" : "AI AWS Managed Services",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-17T07:21:22.978252",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2502,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799826",
+    "updatedAt" : null
+  }, {
+    "id" : 1095,
+    "topicId" : 4165,
+    "name" : "Day by Day",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-17T07:58:50.901419",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1585,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799884",
+    "updatedAt" : null
+  }, {
+    "id" : 1096,
+    "topicId" : 4089,
+    "name" : "Estrutura",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-18T06:02:14.842975",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1801,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.799937",
+    "updatedAt" : null
+  }, {
+    "id" : 1097,
+    "topicId" : 4167,
+    "name" : "Verbs",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-18T06:25:50.951636",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1353,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800024",
+    "updatedAt" : null
+  }, {
+    "id" : 1098,
+    "topicId" : 4132,
+    "name" : "Formatos e tipos de dados",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-20T07:52:59.588123",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1949,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800082",
+    "updatedAt" : null
+  }, {
+    "id" : 1099,
+    "topicId" : 4177,
+    "name" : "AWS Resources",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-22T18:17:01.204337",
+    "studyCount" : 2,
+    "totalStudySeconds" : 5088,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.80014",
+    "updatedAt" : null
+  }, {
+    "id" : 1100,
+    "topicId" : 4164,
+    "name" : "Palavras e Sílabas",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-23T11:26:34.391421",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2722,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800197",
+    "updatedAt" : null
+  }, {
+    "id" : 1101,
+    "topicId" : 4177,
+    "name" : "Review and Questions",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-25T16:52:34.07373",
+    "studyCount" : 2,
+    "totalStudySeconds" : 13058,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800252",
+    "updatedAt" : null
+  }, {
+    "id" : 1102,
+    "topicId" : 4179,
+    "name" : "Receitas e estrutura AWS",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-24T11:50:12.514627",
+    "studyCount" : 1,
+    "totalStudySeconds" : 8221,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800309",
+    "updatedAt" : null
+  }, {
+    "id" : 1103,
+    "topicId" : 4168,
+    "name" : "Types of Phrasal Verbs",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-25T09:19:10.056849",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2206,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800368",
+    "updatedAt" : null
+  }, {
+    "id" : 1104,
+    "topicId" : 4181,
+    "name" : "Padrões: Traversal, Two Pointers, Sliding Window, Prefix Sum, Kadane",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-25T19:54:39.710517",
+    "studyCount" : 1,
+    "totalStudySeconds" : 5378,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800425",
+    "updatedAt" : null
+  }, {
+    "id" : 1105,
+    "topicId" : 4181,
+    "name" : "Clássicos: Two Sum, Three Sum, Maximum Subarray, Product Except Self, Merge Intervals",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800478",
+    "updatedAt" : null
+  }, {
+    "id" : 1106,
+    "topicId" : 4180,
+    "name" : "Big O, Big Ω, Big Θ (Melhor, pior e caso médio) Amortized analysis & Trade-offs tempo vs memória",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800538",
+    "updatedAt" : null
+  }, {
+    "id" : 1107,
+    "topicId" : 4180,
+    "name" : "Domínio automático de: O(1), O(log n), O(n), O(n log n), O(n²), O(2ⁿ), O(n!)",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800597",
+    "updatedAt" : null
+  }, {
+    "id" : 1108,
+    "topicId" : 4169,
+    "name" : "Sounds",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-26T07:06:59.732698",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1220,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.80066",
+    "updatedAt" : null
+  }, {
+    "id" : 1109,
+    "topicId" : 4182,
+    "name" : "Hashing e HashMap",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-26T20:47:44.601037",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2922,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800713",
+    "updatedAt" : null
+  }, {
+    "id" : 1110,
+    "topicId" : 4200,
+    "name" : "LLMs usando RAGs",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-27T07:20:25.270685",
+    "studyCount" : 1,
+    "totalStudySeconds" : 4070,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.80077",
+    "updatedAt" : null
+  }, {
+    "id" : 1111,
+    "topicId" : 4127,
+    "name" : "Análise de áudio",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-27T08:09:29.608534",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2435,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800827",
+    "updatedAt" : null
+  }, {
+    "id" : 1112,
+    "topicId" : 4171,
+    "name" : "Sounds e Connectors",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-28T06:06:01.004156",
+    "studyCount" : 2,
+    "totalStudySeconds" : 6151,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800884",
+    "updatedAt" : null
+  }, {
+    "id" : 1113,
+    "topicId" : 4171,
+    "name" : "Cambridge Phoneme and Dictionary",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800938",
+    "updatedAt" : null
+  }, {
+    "id" : 1114,
+    "topicId" : 4171,
+    "name" : "Music Listening",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.800993",
+    "updatedAt" : null
+  }, {
+    "id" : 1115,
+    "topicId" : 4184,
+    "name" : "Resolução de Exercícios",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-27T13:47:04.729945",
+    "studyCount" : 1,
+    "totalStudySeconds" : 1205,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.80105",
+    "updatedAt" : null
+  }, {
+    "id" : 1116,
+    "topicId" : 4173,
+    "name" : "Real sentences grammar",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-28T05:51:14.871129",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2741,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.801109",
+    "updatedAt" : null
+  }, {
+    "id" : 1117,
+    "topicId" : 4153,
+    "name" : "Config and Set Tests",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-29T04:10:53.672115",
+    "studyCount" : 1,
+    "totalStudySeconds" : 5162,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-29T04:41:52.801162",
+    "updatedAt" : null
+  }, {
+    "id" : 1118,
+    "topicId" : 4157,
+    "name" : "Como criar e arquivos",
+    "description" : "",
+    "lastStudiedAt" : null,
+    "studyCount" : 0,
+    "totalStudySeconds" : 0,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-30T12:52:59.581994",
+    "updatedAt" : null
+  }, {
+    "id" : 1119,
+    "topicId" : 4158,
+    "name" : "DCLGens",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-30T14:55:51.276578",
+    "studyCount" : 1,
+    "totalStudySeconds" : 7058,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-30T12:53:05.61859",
+    "updatedAt" : "2026-08-30T14:55:51.277107"
+  }, {
+    "id" : 1120,
+    "topicId" : 4163,
+    "name" : "Grammar Fundamentals",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-30T16:13:21.798271",
+    "studyCount" : 1,
+    "totalStudySeconds" : 4611,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-30T14:56:21.900237",
+    "updatedAt" : "2026-08-30T16:13:21.800369"
+  }, {
+    "id" : 1121,
+    "topicId" : 4190,
+    "name" : "About Queues",
+    "description" : "",
+    "lastStudiedAt" : "2026-08-30T17:52:32.067484",
+    "studyCount" : 1,
+    "totalStudySeconds" : 2720,
+    "orderIndex" : 0,
+    "createdAt" : "2026-08-30T17:07:04.171968",
+    "updatedAt" : "2026-08-30T17:52:32.068883"
+  } ],
+  "studySessions" : [ {
+    "id" : 1312,
+    "topicItemId" : 1057,
+    "studyDate" : "2026-05-18",
+    "durationSeconds" : 2390,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801267"
+  }, {
+    "id" : 1313,
+    "topicItemId" : 1058,
+    "studyDate" : "2026-05-18",
+    "durationSeconds" : 3177,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801391"
+  }, {
+    "id" : 1314,
+    "topicItemId" : 1059,
+    "studyDate" : "2026-05-19",
+    "durationSeconds" : 4720,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801472"
+  }, {
+    "id" : 1315,
+    "topicItemId" : 1060,
+    "studyDate" : "2026-05-19",
+    "durationSeconds" : 5061,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801522"
+  }, {
+    "id" : 1316,
+    "topicItemId" : 1061,
+    "studyDate" : "2026-05-20",
+    "durationSeconds" : 3716,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801566"
+  }, {
+    "id" : 1317,
+    "topicItemId" : 1062,
+    "studyDate" : "2026-05-20",
+    "durationSeconds" : 3560,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801614"
+  }, {
+    "id" : 1318,
+    "topicItemId" : 1063,
+    "studyDate" : "2026-05-25",
+    "durationSeconds" : 4122,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801657"
+  }, {
+    "id" : 1319,
+    "topicItemId" : 1064,
+    "studyDate" : "2026-05-26",
+    "durationSeconds" : 4242,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801703"
+  }, {
+    "id" : 1320,
+    "topicItemId" : 1065,
+    "studyDate" : "2026-05-27",
+    "durationSeconds" : 2055,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801749"
+  }, {
+    "id" : 1321,
+    "topicItemId" : 1061,
+    "studyDate" : "2026-05-27",
+    "durationSeconds" : 1447,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.80179"
+  }, {
+    "id" : 1322,
+    "topicItemId" : 1059,
+    "studyDate" : "2026-06-02",
+    "durationSeconds" : 1882,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801843"
+  }, {
+    "id" : 1323,
+    "topicItemId" : 1060,
+    "studyDate" : "2026-06-02",
+    "durationSeconds" : 1867,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.80189"
+  }, {
+    "id" : 1324,
+    "topicItemId" : 1066,
+    "studyDate" : "2026-06-02",
+    "durationSeconds" : 1396,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801932"
+  }, {
+    "id" : 1325,
+    "topicItemId" : 1067,
+    "studyDate" : "2026-06-02",
+    "durationSeconds" : 2101,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.801986"
+  }, {
+    "id" : 1326,
+    "topicItemId" : 1061,
+    "studyDate" : "2026-06-03",
+    "durationSeconds" : 4174,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802037"
+  }, {
+    "id" : 1327,
+    "topicItemId" : 1068,
+    "studyDate" : "2026-06-03",
+    "durationSeconds" : 5559,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.80208"
+  }, {
+    "id" : 1328,
+    "topicItemId" : 1069,
+    "studyDate" : "2026-06-26",
+    "durationSeconds" : 3487,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802125"
+  }, {
+    "id" : 1329,
+    "topicItemId" : 1070,
+    "studyDate" : "2026-07-09",
+    "durationSeconds" : 10884,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802174"
+  }, {
+    "id" : 1330,
+    "topicItemId" : 1071,
+    "studyDate" : "2026-07-13",
+    "durationSeconds" : 4678,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802216"
+  }, {
+    "id" : 1331,
+    "topicItemId" : 1072,
+    "studyDate" : "2026-07-13",
+    "durationSeconds" : 1977,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802262"
+  }, {
+    "id" : 1332,
+    "topicItemId" : 1073,
+    "studyDate" : "2026-07-14",
+    "durationSeconds" : 6598,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802305"
+  }, {
+    "id" : 1333,
+    "topicItemId" : 1074,
+    "studyDate" : "2026-07-14",
+    "durationSeconds" : 5061,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802353"
+  }, {
+    "id" : 1334,
+    "topicItemId" : 1075,
+    "studyDate" : "2026-07-20",
+    "durationSeconds" : 4038,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802397"
+  }, {
+    "id" : 1335,
+    "topicItemId" : 1072,
+    "studyDate" : "2026-07-20",
+    "durationSeconds" : 3231,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802439"
+  }, {
+    "id" : 1336,
+    "topicItemId" : 1073,
+    "studyDate" : "2026-07-21",
+    "durationSeconds" : 4423,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802485"
+  }, {
+    "id" : 1337,
+    "topicItemId" : 1076,
+    "studyDate" : "2026-07-22",
+    "durationSeconds" : 3799,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802531"
+  }, {
+    "id" : 1338,
+    "topicItemId" : 1070,
+    "studyDate" : "2026-07-23",
+    "durationSeconds" : 5931,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802573"
+  }, {
+    "id" : 1339,
+    "topicItemId" : 1071,
+    "studyDate" : "2026-07-27",
+    "durationSeconds" : 131,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802619"
+  }, {
+    "id" : 1340,
+    "topicItemId" : 1077,
+    "studyDate" : "2026-07-27",
+    "durationSeconds" : 2495,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.80266"
+  }, {
+    "id" : 1341,
+    "topicItemId" : 1073,
+    "studyDate" : "2026-07-28",
+    "durationSeconds" : 3967,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802705"
+  }, {
+    "id" : 1342,
+    "topicItemId" : 1078,
+    "studyDate" : "2026-07-31",
+    "durationSeconds" : 3600,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802755"
+  }, {
+    "id" : 1343,
+    "topicItemId" : 1071,
+    "studyDate" : "2026-08-03",
+    "durationSeconds" : 2106,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.802812"
+  }, {
+    "id" : 1344,
+    "topicItemId" : 1072,
+    "studyDate" : "2026-08-03",
+    "durationSeconds" : 1423,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.80297"
+  }, {
+    "id" : 1345,
+    "topicItemId" : 1077,
+    "studyDate" : "2026-08-03",
+    "durationSeconds" : 1314,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803104"
+  }, {
+    "id" : 1346,
+    "topicItemId" : 1079,
+    "studyDate" : "2026-08-05",
+    "durationSeconds" : 4460,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803241"
+  }, {
+    "id" : 1347,
+    "topicItemId" : 1080,
+    "studyDate" : "2026-08-05",
+    "durationSeconds" : 2077,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803301"
+  }, {
+    "id" : 1348,
+    "topicItemId" : 1081,
+    "studyDate" : "2026-08-06",
+    "durationSeconds" : 2056,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803456"
+  }, {
+    "id" : 1349,
+    "topicItemId" : 1073,
+    "studyDate" : "2026-08-11",
+    "durationSeconds" : 3114,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803537"
+  }, {
+    "id" : 1350,
+    "topicItemId" : 1082,
+    "studyDate" : "2026-08-13",
+    "durationSeconds" : 4295,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803604"
+  }, {
+    "id" : 1351,
+    "topicItemId" : 1084,
+    "studyDate" : "2026-08-14",
+    "durationSeconds" : 7161,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803675"
+  }, {
+    "id" : 1352,
+    "topicItemId" : 1085,
+    "studyDate" : "2026-08-14",
+    "durationSeconds" : 2492,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803718"
+  }, {
+    "id" : 1353,
+    "topicItemId" : 1088,
+    "studyDate" : "2026-08-14",
+    "durationSeconds" : 1215,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803768"
+  }, {
+    "id" : 1354,
+    "topicItemId" : 1090,
+    "studyDate" : "2026-08-15",
+    "durationSeconds" : 3389,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803813"
+  }, {
+    "id" : 1355,
+    "topicItemId" : 1091,
+    "studyDate" : "2026-08-15",
+    "durationSeconds" : 2329,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803855"
+  }, {
+    "id" : 1356,
+    "topicItemId" : 1092,
+    "studyDate" : "2026-08-17",
+    "durationSeconds" : 1242,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.8039"
+  }, {
+    "id" : 1357,
+    "topicItemId" : 1094,
+    "studyDate" : "2026-08-17",
+    "durationSeconds" : 2502,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803956"
+  }, {
+    "id" : 1358,
+    "topicItemId" : 1095,
+    "studyDate" : "2026-08-17",
+    "durationSeconds" : 1585,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.803997"
+  }, {
+    "id" : 1359,
+    "topicItemId" : 1073,
+    "studyDate" : "2026-08-18",
+    "durationSeconds" : 4065,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804042"
+  }, {
+    "id" : 1360,
+    "topicItemId" : 1096,
+    "studyDate" : "2026-08-18",
+    "durationSeconds" : 1801,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.80409"
+  }, {
+    "id" : 1361,
+    "topicItemId" : 1097,
+    "studyDate" : "2026-08-18",
+    "durationSeconds" : 1353,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804136"
+  }, {
+    "id" : 1362,
+    "topicItemId" : 1070,
+    "studyDate" : "2026-08-20",
+    "durationSeconds" : 4498,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804187"
+  }, {
+    "id" : 1363,
+    "topicItemId" : 1098,
+    "studyDate" : "2026-08-20",
+    "durationSeconds" : 1949,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804229"
+  }, {
+    "id" : 1364,
+    "topicItemId" : 1099,
+    "studyDate" : "2026-08-20",
+    "durationSeconds" : 1119,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804277"
+  }, {
+    "id" : 1365,
+    "topicItemId" : 1099,
+    "studyDate" : "2026-08-22",
+    "durationSeconds" : 3969,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804322"
+  }, {
+    "id" : 1366,
+    "topicItemId" : 1100,
+    "studyDate" : "2026-08-23",
+    "durationSeconds" : 2722,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804363"
+  }, {
+    "id" : 1367,
+    "topicItemId" : 1101,
+    "studyDate" : "2026-08-23",
+    "durationSeconds" : 3976,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804416"
+  }, {
+    "id" : 1368,
+    "topicItemId" : 1102,
+    "studyDate" : "2026-08-24",
+    "durationSeconds" : 8221,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804461"
+  }, {
+    "id" : 1369,
+    "topicItemId" : 1077,
+    "studyDate" : "2026-08-24",
+    "durationSeconds" : 2951,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804502"
+  }, {
+    "id" : 1370,
+    "topicItemId" : 1085,
+    "studyDate" : "2026-08-24",
+    "durationSeconds" : 3314,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804548"
+  }, {
+    "id" : 1371,
+    "topicItemId" : 1073,
+    "studyDate" : "2026-08-25",
+    "durationSeconds" : 3309,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804589"
+  }, {
+    "id" : 1372,
+    "topicItemId" : 1064,
+    "studyDate" : "2026-08-25",
+    "durationSeconds" : 4501,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804634"
+  }, {
+    "id" : 1373,
+    "topicItemId" : 1103,
+    "studyDate" : "2026-08-25",
+    "durationSeconds" : 2206,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804681"
+  }, {
+    "id" : 1374,
+    "topicItemId" : 1101,
+    "studyDate" : "2026-08-25",
+    "durationSeconds" : 9082,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804741"
+  }, {
+    "id" : 1375,
+    "topicItemId" : 1104,
+    "studyDate" : "2026-08-25",
+    "durationSeconds" : 5378,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804786"
+  }, {
+    "id" : 1376,
+    "topicItemId" : 1061,
+    "studyDate" : "2026-08-26",
+    "durationSeconds" : 4953,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804832"
+  }, {
+    "id" : 1377,
+    "topicItemId" : 1108,
+    "studyDate" : "2026-08-26",
+    "durationSeconds" : 1220,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804873"
+  }, {
+    "id" : 1378,
+    "topicItemId" : 1109,
+    "studyDate" : "2026-08-26",
+    "durationSeconds" : 2922,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.804956"
+  }, {
+    "id" : 1379,
+    "topicItemId" : 1110,
+    "studyDate" : "2026-08-27",
+    "durationSeconds" : 4070,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.805017"
+  }, {
+    "id" : 1380,
+    "topicItemId" : 1111,
+    "studyDate" : "2026-08-27",
+    "durationSeconds" : 2435,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.805058"
+  }, {
+    "id" : 1381,
+    "topicItemId" : 1112,
+    "studyDate" : "2026-08-27",
+    "durationSeconds" : 5276,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.805103"
+  }, {
+    "id" : 1382,
+    "topicItemId" : 1115,
+    "studyDate" : "2026-08-27",
+    "durationSeconds" : 1205,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.805149"
+  }, {
+    "id" : 1383,
+    "topicItemId" : 1069,
+    "studyDate" : "2026-08-28",
+    "durationSeconds" : 5542,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.80519"
+  }, {
+    "id" : 1384,
+    "topicItemId" : 1116,
+    "studyDate" : "2026-08-28",
+    "durationSeconds" : 2741,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.805237"
+  }, {
+    "id" : 1385,
+    "topicItemId" : 1112,
+    "studyDate" : "2026-08-28",
+    "durationSeconds" : 875,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.805282"
+  }, {
+    "id" : 1386,
+    "topicItemId" : 1117,
+    "studyDate" : "2026-08-29",
+    "durationSeconds" : 5162,
+    "notes" : "",
+    "createdAt" : "2026-08-29T04:41:52.805323"
+  }, {
+    "id" : 1387,
+    "topicItemId" : 1091,
+    "studyDate" : "2026-08-29",
+    "durationSeconds" : 3624,
+    "notes" : "",
+    "createdAt" : "2026-08-29T05:42:42.904324"
+  }, {
+    "id" : 1388,
+    "topicItemId" : 1087,
+    "studyDate" : "2026-08-29",
+    "durationSeconds" : 681,
+    "notes" : "",
+    "createdAt" : "2026-08-29T05:54:21.840647"
+  }, {
+    "id" : 1389,
+    "topicItemId" : 1119,
+    "studyDate" : "2026-08-30",
+    "durationSeconds" : 7058,
+    "notes" : "",
+    "createdAt" : "2026-08-30T14:55:51.276578"
+  }, {
+    "id" : 1390,
+    "topicItemId" : 1120,
+    "studyDate" : "2026-08-30",
+    "durationSeconds" : 4611,
+    "notes" : "",
+    "createdAt" : "2026-08-30T16:13:21.798271"
+  }, {
+    "id" : 1391,
+    "topicItemId" : 1121,
+    "studyDate" : "2026-08-30",
+    "durationSeconds" : 2720,
+    "notes" : "",
+    "createdAt" : "2026-08-30T17:52:32.067484"
+  } ],
+  "notes" : [ {
+    "id" : 30,
+    "title" : "Certificações Roadmap",
+    "content" : "╔══════════════════════════════════════════════════════════════════╗\n║         ROADMAP — DO BOM AO MAIS FODA DO MUNDO                  ║\n║         Java · Cloud · Arquitetura · Segurança                  ║\n╚══════════════════════════════════════════════════════════════════╝\n\n  Base atual:  AWS Cloud Practitioner  ✓\n               AWS Solutions Architect Associate  ✓\n               AWS Developer Associate  ✓\n               Azure AZ-900  ✓\n               Desenvolvedor Java  ✓\n\n  Investimento total:  ~$7.100 USD ao longo de 4 anos\n  Dedicação necessária:  ~17 horas por semana\n  Destino:  Top 0,01% global em tecnologia\n\n\n══════════════════════════════════════════════════════════════════\n  FASE 1 — CONSOLIDAÇÃO                          (Meses 1 a 6) Até Dezembro/2026\n  Custo total da fase:  ~$840 USD\n══════════════════════════════════════════════════════════════════\n\n  ☕  OCP Java 17  (Oracle · 1Z0-829)\n      Prova:      $245 USD\n      Material:   Livro Selikoff & Boyarsky OCP 17  (~$60)\n      Dedicação:  12-15h por semana · 8 semanas\n      Por quê:    O certificado Java mais respeitado do mercado.\n                  Qualquer empresa séria valoriza muito.\n\n   ☕ Spring Professional (2V0-72.22) \n\n  ☕  OCP Java 21  (Oracle · 1Z0-830)\n      Prova:      $245 USD\n      Material:   Livro Selikoff & Boyarsky OCP 21  (~$60)\n      Dedicação:  10h por semana · 6 semanas\n      Por quê:    Java LTS mais recente. Records, Virtual Threads,\n                  Pattern Matching. Raríssimo no mercado.\n\n  ☁️  AWS SysOps Administrator Associate  (SOA-C02)\n      Prova:      $150 USD\n      Material:   Udemy — Stéphane Maarek  (~$20)\n      Dedicação:  10h por semana · 6 semanas\n      Por quê:    Fecha o trio dos 3 Associates da AWS.\n                  Poucíssimos profissionais têm os três juntos.\n\n\n══════════════════════════════════════════════════════════════════\n  FASE 2 — ESPECIALIZAÇÃO                        (Meses 6 a 12) Até Dezembro/27\n  Custo total da fase:  ~$1.050 USD\n══════════════════════════════════════════════════════════════════\n\n  ☁️  AWS Solutions Architect Professional  (SAP-C02)\n      Prova:      $300 USD\n      Material:   Udemy Maarek + TutorialsDojo simulados  (~$40)\n      Dedicação:  15-20h por semana · 16 semanas\n      Por quê:    O certificado AWS mais difícil e mais valorizado.\n                  Considerado top 3 provas mais difíceis da indústria.\n                  Quem tem é Sênior instantâneo em qualquer empresa.\n\n  ☁️  AWS DevOps Engineer Professional  (DOP-C02)\n      Prova:      $300 USD\n      Material:   Udemy Maarek + TutorialsDojo simulados  (~$40)\n      Dedicação:  12-15h por semana · 10 semanas\n      Por quê:    Combo perfeito com seu perfil de Dev + Cloud.\n                  Cobre CI/CD, IaC, monitoramento e automação a fundo.\n\n  ☁️  Azure Administrator Associate  (AZ-104)\n      Prova:      $165 USD\n      Material:   Microsoft Learn (gratuito) + Udemy  (~$20)\n      Dedicação:  10h por semana · 7 semanas\n      Por quê:    Fundação técnica real no Azure. Sai do AZ-900\n                  e entra no mundo de operações Azure de verdade.\n\n  ☁️  Azure Developer Associate  (AZ-204)\n      Prova:      $165 USD\n      Material:   Microsoft Learn (gratuito) + Udemy  (~$20)\n      Dedicação:  10h por semana · 7 semanas\n      Por quê:    O espelho do AWS Developer, agora no Azure.\n                  Perfeito para o seu perfil de desenvolvedor.\n\n\n══════════════════════════════════════════════════════════════════\n  FASE 3 — ARQUITETO MULTI-CLOUD                (Meses 12 a 24) Até dezembro/29\n  Custo total da fase:  ~$1.930 USD\n══════════════════════════════════════════════════════════════════\n  \n   ☕   Red Hat Certified Enterprise Application Developer (EX183) \n\n  ☁️  Azure Solutions Architect Expert  (AZ-305)\n      Prova:      $165 USD\n      Material:   Microsoft Learn (gratuito) + Udemy  (~$20)\n      Dedicação:  12h por semana · 10 semanas\n      Por quê:    O equivalente ao SAP da AWS, mas no Azure.\n                  Expert de verdade no ecossistema Microsoft.\n\n  ☁️  Azure DevOps Engineer Expert  (AZ-400)\n      Prova:      $165 USD\n      Material:   Microsoft Learn (gratuito) + Udemy  (~$20)\n      Dedicação:  12h por semana · 10 semanas\n      Por quê:    Fecha o nível Expert no Azure. Raríssimo no Brasil.\n\n  ☁️  AWS Security Specialty  (SCS-C02)\n      Prova:      $300 USD\n      Material:   Udemy + TutorialsDojo  (~$40)\n      Dedicação:  12h por semana · 8 semanas\n      Por quê:    Todo arquiteto sênior precisa dominar segurança.\n                  Abre portas para papéis de Security Architect.\n\n  ☁️  AWS Machine Learning Specialty  (MLS-C01)\n      Prova:      $300 USD\n      Material:   Udemy + prática no SageMaker  (~$50)\n      Dedicação:  15h por semana · 12 semanas\n      Por quê:    O futuro é ML e AI. Diferencial enorme no mercado.\n\n  ☁️  AWS Data Analytics Specialty  (DAS-C01)\n      Prova:      $300 USD\n      Material:   Udemy + TutorialsDojo  (~$40)\n      Dedicação:  12h por semana · 8 semanas\n      Por quê:    Data Mesh, Data Lakes, Kinesis, Redshift a fundo.\n                  Cada vez mais requisitado em empresas data-driven.\n\n  ☁️  GCP Associate Cloud Engineer\n      Prova:      $200 USD\n      Material:   Coursera — Google Cloud  (~$50/mês)\n      Dedicação:  10h por semana · 7 semanas\n      Por quê:    Entrada no terceiro grande cloud do mundo.\n                  Inicia o tripé AWS + Azure + GCP.\n\n  ☁️  GCP Professional Cloud Architect\n      Prova:      $200 USD\n      Material:   Coursera + A Cloud Guru  (~$50)\n      Dedicação:  12h por semana · 10 semanas\n      Por quê:    Com SAP + AZ-305 + GCP Architect você entra no\n                  top 0,1% global. Menos de 500 pessoas no Brasil têm os 3.\n\n  ⚙️  CKA — Certified Kubernetes Administrator  (CNCF)\n      Prova:      $395 USD  ← compre o bundle CKA+CKAD+CKS por $895\n      Material:   KodeKloud  (~$30/mês)\n      Dedicação:  12h por semana · 8 semanas\n      Por quê:    Prova 100% prática no terminal. Kubernetes é\n                  obrigatório para qualquer arquiteto cloud moderno.\n\n\n══════════════════════════════════════════════════════════════════\n  FASE 4 — ENTERPRISE ARCHITECT                 (Meses 24 a 36) Até dezembro/2031\n  Custo total da fase:  ~$1.600 USD\n══════════════════════════════════════════════════════════════════\n\n  \uD83C\uDFDB️  TOGAF 9 Foundation + Practitioner  (The Open Group)\n      Prova:      ~$550 USD  (exame combinado Level 1+2)\n      Material:   Livro oficial The Open Group  (~$50)\n      Dedicação:  8h por semana · 6 semanas\n      Por quê:    Padrão global de arquitetura enterprise.\n                  Abre portas para CTO, Principal Architect,\n                  consultorias top como McKinsey Digital e Accenture.\n\n  ⚙️  CKAD — Certified Kubernetes Application Developer  (CNCF)\n      Prova:      incluso no bundle comprado na Fase 3\n      Material:   KodeKloud  (~$30/mês)\n      Dedicação:  10h por semana · 5 semanas\n      Por quê:    Segundo de três do Kubernetes Triple Crown.\n\n  ⚙️  CKS — Certified Kubernetes Security Specialist  (CNCF)\n      Prova:      incluso no bundle comprado na Fase 3\n      Material:   KodeKloud  (~$30/mês)\n      Dedicação:  12h por semana · 7 semanas\n      Por quê:    O mais difícil dos três. Menos de 2.000 pessoas\n                  no mundo têm o triplo CKA+CKAD+CKS completo.\n\n  \uD83D\uDD11  HashiCorp Terraform Associate  (003)\n      Prova:      $70 USD\n      Material:   Udemy + documentação oficial  (~$20)\n      Dedicação:  8h por semana · 4 semanas\n      Por quê:    IaC é o pilar do cloud moderno. Terraform é\n                  o padrão de mercado absoluto.\n\n  \uD83D\uDD11  HashiCorp Terraform Professional\n      Prova:      $130 USD\n      Material:   HashiCorp Learn (gratuito) + prática\n      Dedicação:  10h por semana · 6 semanas\n      Por quê:    Pouquíssimos têm o Professional. Diferencial\n                  enorme em qualquer processo seletivo técnico.\n\n  \uD83D\uDD12  CCSP — Certified Cloud Security Professional  (ISC)²\n      Prova:      $599 USD\n      Material:   Official Study Guide ISC²  (~$80)\n      Dedicação:  12h por semana · 10 semanas\n      Por quê:    Segurança em cloud no nível mais elevado.\n                  Requer 5 anos de experiência em TI comprovados.\n                  Comece a documentar sua experiência AGORA.\n\n\n══════════════════════════════════════════════════════════════════\n  FASE 5 — TOPO ABSOLUTO                        (Meses 36 a 48) até dezembro/2034\n  Custo total da fase:  ~$1.680 USD\n══════════════════════════════════════════════════════════════════\n\n  \uD83D\uDD12  CISSP — Certified Information Systems Security Pro  (ISC)²\n      Prova:      $749 USD\n      Material:   Livro Destilate + Boson Practice Exams  (~$120)\n      Dedicação:  15-20h por semana · 24 semanas\n      Por quê:    O certificado de segurança mais respeitado\n                  do planeta inteiro. Abre portas para CISO,\n                  Security Architect, Principal roles globais.\n                  A maioria das pessoas falha na primeira tentativa.\n                  Não tente sem 6 meses de estudo muito sério.\n                  Exige 5 anos de experiência em segurança.\n\n  \uD83E\uDD16  AWS AI Practitioner\n      Prova:      $100 USD\n      Material:   AWS Skill Builder (gratuito)\n      Dedicação:  6h por semana · 3 semanas\n\n  \uD83E\uDD16  Azure AI Engineer Associate  (AI-102)\n      Prova:      $165 USD\n      Material:   Microsoft Learn (gratuito)\n      Dedicação:  10h por semana · 6 semanas\n\n  \uD83E\uDD16  GCP Professional ML Engineer\n      Prova:      $200 USD\n      Material:   Coursera Google  (~$50)\n      Dedicação:  15h por semana · 10 semanas\n      Por quê:    GCP é líder absoluto em ML e AI.\n                  Com os três AI certs (AWS+Azure+GCP) você\n                  é um dos poucos arquitetos AI multi-cloud do mundo.\n\n  \uD83D\uDCCA  Databricks Certified Data Engineer Professional\n      Prova:      $200 USD\n      Material:   Databricks Academy  (~$50)\n      Dedicação:  12h por semana · 8 semanas\n      Por quê:    Padrão de mercado para Data Engineering.\n                  Complementa perfeitamente o Data Mesh e Analytics.\n\n\n══════════════════════════════════════════════════════════════════\n  RESUMO FINANCEIRO TOTAL\n══════════════════════════════════════════════════════════════════\n\n  Fase 1  (meses  1-6)   →   ~$840 USD\n  Fase 2  (meses  6-12)  →   ~$1.050 USD\n  Fase 3  (meses 12-24)  →   ~$1.930 USD\n  Fase 4  (meses 24-36)  →   ~$1.600 USD\n  Fase 5  (meses 36-48)  →   ~$1.680 USD\n  ─────────────────────────────────────────\n  TOTAL em 4 anos        →   ~$7.100 USD\n                             ~R$ 41.000 BRL\n\n  Isso é menos que 1 semestre de pós-graduação,\n  com retorno financeiro infinitamente maior.\n\n\n══════════════════════════════════════════════════════════════════\n  RESUMO DE HORAS DE ESTUDO\n══════════════════════════════════════════════════════════════════\n\n  Fase 1   →   ~360 horas\n  Fase 2   →   ~600 horas\n  Fase 3   →   ~900 horas\n  Fase 4   →   ~700 horas\n  Fase 5   →   ~800 horas\n  ───────────────────────────\n  TOTAL    →   ~3.360 horas em 4 anos\n\n  Isso equivale a 17 horas por semana.\n  Estudando 2h30 por dia, você chega lá mantendo emprego full-time.\n\n\n══════════════════════════════════════════════════════════════════\n  PLATAFORMAS DE ESTUDO RECOMENDADAS\n══════════════════════════════════════════════════════════════════\n\n  Udemy (Stéphane Maarek)    →  $15-30/curso    →  AWS (melhor do mercado)\n  TutorialsDojo              →  $15/simulado     →  Simulados AWS, indispensável\n  KodeKloud                  →  $30/mês          →  Kubernetes e Terraform\n  Microsoft Learn            →  Gratuito         →  Toda trilha Azure\n  Coursera (Google)          →  $50/mês          →  GCP completo\n  AWS Skill Builder          →  Gratuito/$29mês  →  Trilhas AWS oficiais\n  Databricks Academy         →  Gratuito         →  Databricks\n  HashiCorp Learn            →  Gratuito         →  Terraform\n\n\n══════════════════════════════════════════════════════════════════\n  DICAS DE OURO\n══════════════════════════════════════════════════════════════════\n\n  →  Nunca estude mais de 2 certificações em paralelo.\n\n  →  Sempre faça simulados no TutorialsDojo antes de marcar a prova.\n     Só marque quando tirar consistentemente acima de 80%.\n\n  →  AWS SAP é a porta de entrada para salários de Principal Engineer.\n     É sua maior prioridade depois de fechar a Fase 1.\n\n  →  CISSP exige 5 anos de experiência documentada em segurança.\n     Comece a acumular e registrar essa experiência já.\n\n  →  O bundle CKA+CKAD+CKS da CNCF economiza ~$290.\n     Compre já na Fase 3 mesmo que vá usar nas Fases 3 e 4.\n\n  →  Com SAP + AZ-305 + GCP Architect você compete\n     globalmente, não apenas no Brasil.\n\n  →  Com CISSP adicionado ao perfil você é um dos profissionais\n     mais raros e bem pagos da indústria de tecnologia mundial.\n\n  →  LinkedIn com essas certifications atrai recrutadores de\n     FAANG, McKinsey Digital, Accenture Cloud e unicórnios\n     sem você precisar mandar currículo para ninguém.\n\n\n══════════════════════════════════════════════════════════════════\n  ONDE VOCÊ ESTARÁ AO FINAL DOS 4 ANOS\n══════════════════════════════════════════════════════════════════\n\n  Certificações Java:     OCP 17 + OCP 21\n  Certificações AWS:      CCP + SAA + DVA + SOA + SAP + DOP\n                          + Security + ML + Data Analytics\n  Certificações Azure:    AZ-900 + AZ-104 + AZ-204\n                          + AZ-305 + AZ-400 + AI-102\n  Certificações GCP:      ACE + Professional Architect + ML Engineer\n  Kubernetes:             CKA + CKAD + CKS  (Triple Crown)\n  Terraform:              Associate + Professional\n  Arquitetura:            TOGAF 9 Foundation + Practitioner\n  Segurança:              CCSP + CISSP\n  Data & AI:              AWS AI + Azure AI + GCP ML + Databricks\n\n  Total de certificações:  ~28 certificações\n\n  Você não será apenas o mais certificado da sala.\n  Você será o mais certificado da maioria das empresas.\n\n══════════════════════════════════════════════════════════════════",
+    "subjectId" : 234,
+    "topicId" : null,
+    "topicItemId" : null,
+    "createdAt" : "2026-08-29T04:41:52.805402",
+    "updatedAt" : null
+  }, {
+    "id" : 31,
+    "title" : "Studies Order",
+    "content" : "Orderer os studies at eduControl of the week is about [].\nAt certs, English and Algorithms, there isn't this rule.",
+    "subjectId" : null,
+    "topicId" : null,
+    "topicItemId" : null,
+    "createdAt" : "2026-08-29T04:41:52.805545",
+    "updatedAt" : null
+  } ],
+  "libraryItems" : [ {
+    "id" : 228,
+    "title" : "Doc Docker Conteineres",
+    "content" : "Explicação sobre Conteineres para Docker",
+    "url" : "https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/",
+    "author" : "Docker",
+    "type" : "LINK",
+    "subjectId" : 228,
+    "tags" : "CONTEINERES",
+    "createdAt" : "2026-08-29T04:41:52.805627",
+    "updatedAt" : null
+  }, {
+    "id" : 229,
+    "title" : "Dockerfile doc",
+    "content" : "",
+    "url" : "https://docs.docker.com/reference/dockerfile/",
+    "author" : "Docker",
+    "type" : "ARTICLE",
+    "subjectId" : 228,
+    "tags" : "Dockerfile",
+    "createdAt" : "2026-08-29T04:41:52.805823",
+    "updatedAt" : null
+  }, {
+    "id" : 230,
+    "title" : "Arquitetura do Prometheus",
+    "content" : "",
+    "url" : "https://prometheus.io/docs/introduction/overview/",
+    "author" : "Prometheus",
+    "type" : "ARTICLE",
+    "subjectId" : 228,
+    "tags" : "PROMETHEUS",
+    "createdAt" : "2026-08-29T04:41:52.805945",
+    "updatedAt" : null
+  }, {
+    "id" : 231,
+    "title" : "Comparação Prometheus",
+    "content" : "",
+    "url" : "https://prometheus.io/docs/introduction/comparison/",
+    "author" : "Prometheus",
+    "type" : "ARTICLE",
+    "subjectId" : 228,
+    "tags" : "PROMETHEUS",
+    "createdAt" : "2026-08-29T04:41:52.805993",
+    "updatedAt" : null
+  }, {
+    "id" : 232,
+    "title" : "Kotlin Documentation",
+    "content" : "",
+    "url" : "https://kotlinlang.org/docs/annotations.html",
+    "author" : "Kotlin",
+    "type" : "ARTICLE",
+    "subjectId" : 229,
+    "tags" : "Kotlin",
+    "createdAt" : "2026-08-29T04:41:52.806037",
+    "updatedAt" : null
+  }, {
+    "id" : 233,
+    "title" : "Livro Kafka e Springboot",
+    "content" : "",
+    "url" : "https://cursos.alura.com.br/classpage/book/apache-kafka-spring-boot/chapter/175",
+    "author" : "Casa do Código",
+    "type" : "BOOK",
+    "subjectId" : 229,
+    "tags" : "KAFKA",
+    "createdAt" : "2026-08-29T04:41:52.806098",
+    "updatedAt" : null
+  }, {
+    "id" : 234,
+    "title" : "Livro Kafka Connect",
+    "content" : "",
+    "url" : "https://cursos.alura.com.br/classpage/book/kafka-connect-kafka-streams/chapter/1198",
+    "author" : "Casa do Código",
+    "type" : "BOOK",
+    "subjectId" : 229,
+    "tags" : "KAFKA",
+    "createdAt" : "2026-08-29T04:41:52.806141",
+    "updatedAt" : null
+  }, {
+    "id" : 235,
+    "title" : "Doc Kubernetes",
+    "content" : "",
+    "url" : "https://kubernetes.io/pt-br/docs/concepts/workloads/pods/#trabalhando-com-pods",
+    "author" : "Kubernetes",
+    "type" : "ARTICLE",
+    "subjectId" : 228,
+    "tags" : "KUBERNETES",
+    "createdAt" : "2026-08-29T04:41:52.80627",
+    "updatedAt" : null
+  }, {
+    "id" : 236,
+    "title" : "Doc ArgoCD",
+    "content" : "",
+    "url" : "https://argo-cd.readthedocs.io/en/stable/operator-manual/architecture/",
+    "author" : "ArgoCD",
+    "type" : "ARTICLE",
+    "subjectId" : 228,
+    "tags" : "ArgoCD",
+    "createdAt" : "2026-08-29T04:41:52.80632",
+    "updatedAt" : null
+  }, {
+    "id" : 237,
+    "title" : "Doc Swift",
+    "content" : "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters",
+    "url" : "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters",
+    "author" : "",
+    "type" : "ARTICLE",
+    "subjectId" : 231,
+    "tags" : "Swift",
+    "createdAt" : "2026-08-29T04:41:52.806359",
+    "updatedAt" : null
+  } ],
+  "weeklyPlans" : [ ]
+}
